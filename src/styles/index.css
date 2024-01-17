@@ -2,16 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 @import "./globals";
+@import "./components.css";
 
 html,
 body {
-  /* @apply font-sans font-regular; */
+  @apply font-sans font-medium;
 
   padding: 0;
   margin: 0;
   min-width: 320px;
   min-height: 100dvh;
-  background-color: #080808;  /* 121212 */
+  background-color: #111111; /* #111111 */  /* 121212 */ /* #080808 */ 
   font-size: 100%;
   color: #FFF;
   -webkit-font-smoothing: antialiased;

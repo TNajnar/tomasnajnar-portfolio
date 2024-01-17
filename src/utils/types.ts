@@ -5,4 +5,9 @@ export type THeaderLinks = {
   path: string;
 }
 
+export type TSocialIcons = {
+  icon: string;
+  url: string;
+}
+
 /* #endregion */

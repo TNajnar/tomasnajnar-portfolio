@@ -8,15 +8,26 @@ const config: Config = {
     './src/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
-    colors: {
-      black: '#000',
-      gray: '#ADB7BE',
-      white: '#FFF'
+    extend: {
+      colors: {
+        black: '#111111',
+        white: '#FFF',
+        gray: {
+          DEFAULT: '#ADB7BE',
+          'light-1': '#8d8d8d',
+          'dark-1': '#262626',
+        },
+        yellow: '#feda00',
+      },
+      screens: {
+        sm: '576px',
+        md: '768px',
+        desktop: '1224px',
+      },  
+      fontSize: {
+        'custom-title': '34px',
+      },
     },
-    screens: {
-      desktop: '1224px',
-    },
-    extend: {},
   },
   plugins: [],
 }

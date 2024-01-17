@@ -12,7 +12,9 @@
 }
 
 .mainComponent {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  @apply flex flex-col items-center;
+}
+
+.default-transition {
+  @apply transform transition-all duration-300;
 }

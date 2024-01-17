@@ -1,6 +1,6 @@
 import { ReactNode } from "react";
 import { Metadata } from "next";
-import { Header } from "@/layout";
+import { Header } from "@/components";
 import '@/styles/index.css'
 
 export const metadata: Metadata = {

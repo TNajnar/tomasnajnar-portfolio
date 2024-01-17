@@ -1,10 +1,11 @@
 import { ReactElement } from "react"
-import { AboutMe } from "@/components";
+import { AboutMe, Introduction } from "@/components";
 
-const Page = (): ReactElement => {
-  return (
+const Page = (): ReactElement => (
+  <div className="flex flex-col pt-24">
+    <Introduction />
     <AboutMe />
-  );
-};
+  </div>
+);
 
 export default Page;
