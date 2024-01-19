@@ -1,3 +1,2 @@
-export { default as Icon } from "./Icon/Icon";
-export type { TIconType } from './Icon/Icon';
-export { default as VerticalExpander } from "./VerticalExpander/VerticalExpander";
+export { default as SocialIcons } from "./SocialIcons";
+export { default as VerticalExpander } from "./VerticalExpander";

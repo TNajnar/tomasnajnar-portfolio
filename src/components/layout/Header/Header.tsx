@@ -1,36 +1,35 @@
 "use client"
 import { ReactElement } from "react"
 import { useToggle } from "react-use";
-import Image from "next/image";
 import Link from "next/link";
 import { HamburgerMenu, MobileMenu } from "./components";
-import { Icon, TIconType } from "@/components/shared";
-import { headerLinks, socialIcons } from "../LayoutData";
+import { SocialIcons } from "@/components/shared";
+import { ERoutes } from "@/utils/enums";
+import { headerLinks } from "../LayoutData";
 import clsx from "clsx";
+import ThemeSwitcher from "./components/ThemeSwitcher";
 
 const Header = (): ReactElement => {
   const [open, toggleMenu] = useToggle(false);
-
+  
   return (
-    <header className={clsx("relative py-4 border-b border-white")}>
+    <header className={clsx("sticky top-0 z-10 bg-black py-4 border-b border-white")}>
       <div className={clsx("page-layout", "flex justify-between items-center")}>
-        <Link className="text-5xl" href="#">
-          <Image src="/logo.png" alt="TN-logo" width={135} height={30} />
+        <Link href={ERoutes.INTRO}>
+          <img alt="TN-logo" src="/logo.png" width={100} height={30} />
         </Link>
 
         <nav className="wrapper">
-          {headerLinks.map(({title, path}) => 
-            <Link key={title} className="cursor-pointer hover:text-white" href={path}>
-              {title}
+          {headerLinks.map(({id, path, title}) => 
+            <Link className="hover:text-white" href={path} key={id}>
+              <span className="bg-black w-full h-full p-2">
+                {title}
+              </span>
             </Link>
           )}
-          <div className="iconWrapper">
-            {socialIcons.map(({icon, url}) => 
-              <Link key={icon} className="p-2 rounded-full border-gray border-2 bg-gray-dark-1 cursor-pointer" href={url}>
-                <Icon className="w-6 h-6 fill-white" type={icon as TIconType} />
-              </Link>
-            )}
-          </div>
+
+          <SocialIcons />
+          <ThemeSwitcher className="order-last" />
         </nav>
 
         <HamburgerMenu open={open} toggleMenu={toggleMenu} />
@@ -38,7 +37,7 @@ const Header = (): ReactElement => {
 
       <MobileMenu open={open} toggleMenu={toggleMenu} />
     </header>
-  )
+  );
 };
 
 export default Header;

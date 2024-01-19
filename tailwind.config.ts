@@ -7,6 +7,7 @@ const config: Config = {
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
     './src/**/*.{js,ts,jsx,tsx,mdx}',
   ],
+  darkMode: "class",
   theme: {
     extend: {
       colors: {
@@ -19,13 +20,22 @@ const config: Config = {
         },
         yellow: '#feda00',
       },
+      fontSize: {
+        'custom-title': '34px',
+      },
+      height: {
+        dscreen: '100dvh',
+      },
+      order: {
+        '998': '998'
+      },
       screens: {
         sm: '576px',
         md: '768px',
         desktop: '1224px',
-      },  
-      fontSize: {
-        'custom-title': '34px',
+      },
+      zIndex: {
+        1: '1',
       },
     },
   },

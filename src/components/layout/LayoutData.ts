@@ -1,14 +1,8 @@
 import { ERoutes } from "@/utils/enums";
-import { THeaderLinks, TSocialIcons } from "@/utils/types";
+import { THeaderLinks, } from "@/utils/types";
 
 export const headerLinks: Array<THeaderLinks> = [
-  { title: 'About Me', path: '#about' },
-  { title: 'Projects', path: '#projects' },
-  { title: 'Contact me', path: '#contact' }
+  { id: 88, path: ERoutes.ABOUT_ME, title: 'About Me' },
+  { id: 89, path: ERoutes.PROJECTS, title: 'Projects' },
+  { id: 90, path: ERoutes.CONTACT, title: 'Contact me' }
 ];
-
-export const socialIcons: Array<TSocialIcons> = [
-  { icon: 'LinkedIn', url: ERoutes.LINKEDIN },
-  { icon: 'Instagram', url: ERoutes.INSTAGRAM },
-  { icon: 'GitHub', url: ERoutes.GIT_HUB },
-]

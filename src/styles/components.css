@@ -2,16 +2,14 @@
 
 .wrapper {
   @apply hidden;
-  @apply desktop:flex items-center gap-6 text-xl text-gray;
+  @apply desktop:flex items-center gap-6 text-xl;
 }
 
 .wrapper > :nth-child(3) {
-  @apply p-2 order-last ;
-  @apply border-gray border-2 cursor-pointer hover:border-white hover:text-white;
-}
-
-.iconWrapper {
-  @apply flex items-center gap-3;
+  @apply flex justify-center items-center p-1;
+  @apply order-998;
+  @apply bg-gradient-to-r from-yellow to-gray-light-1;
+  @apply hover:text-white hover:to-yellow;
 }
 
 .mobileWrapper {
@@ -28,12 +26,44 @@
   @apply -top-96;
 }
 
+.footerWrapper {
+  @apply flex flex-col items-start gap-6 desktop:flex-row sm:justify-between desktop:items-center desktop:gap-0;
+  @apply py-4;
+}
+
 /* #endregion */
 
 /* #region Introduction */
 
 .typeAnimation {
-  @apply text-custom-title sm:text-5xl desktop:text-8xl text-gray;
+  @apply text-custom-title sm:text-5xl desktop:text-8xl h-24;
+}
+
+/* #endregion */
+
+/* #region Projects */
+
+.projectsWrapper {
+  @apply relative w-96 h-52 overflow-hidden rounded-lg;
+  @apply flex-shrink-0 flex-grow-0;
+}
+
+.viewIcon {
+  @apply hidden;
+  @apply absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 z-1;
+  @apply w-6 h-6 text-black;
+}
+
+.mask {
+  @apply absolute top-0 w-full h-full hover:blur-sm;
+}
+
+.projectsWrapper:where(:hover) > .mask {
+  @apply bg-gray/30;
+}
+
+.projectsWrapper:where(:hover) > .viewIcon {
+  @apply block cursor-pointer;
 }
 
 /* #endregion */
