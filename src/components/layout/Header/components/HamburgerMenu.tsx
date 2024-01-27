@@ -2,7 +2,7 @@ import { ReactElement } from "react";
 import clsx from "clsx";
 
 const styles = {
-  icon: "relative w-14 h-0.5 bg-black black:bg-white " +
+  icon: "relative w-14 h-0.5 bg-black dark:bg-white " +
     "before:absolute before:top-2 before:left-0 before:w-full before:h-full " +
     "before:bg-black dark:before:bg-white before:transition-all before:duration-300 before:ease-out " +
     "after:absolute after:-top-2 after:left-0 after:w-full after:h-full " +

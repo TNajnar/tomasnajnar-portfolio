@@ -1,10 +1,9 @@
 import { ReactElement } from "react"
-import Link from "next/link";
-import Image from "next/image";
-import { ERoutes } from "@/utils/enums";
-import { headerLinks } from "@/components/layout/LayoutData";
-import clsx from "clsx";
 import { useLockBodyScroll } from "react-use";
+import { headerLinks } from "@/components/layout/LayoutData";
+import { SCROLL_DURATION, SCROLL_OPTIONS } from "@/utils/consts";
+import { Link, animateScroll } from "react-scroll";
+import clsx from "clsx";
 
 interface IProps {
   open: boolean;
@@ -18,17 +17,25 @@ const MobileMenu = ({ open, toggleMenu }: IProps): ReactElement => {
     <>
       <nav className={clsx("default-transition mobileWrapper", open ? "isOpen" : "isClose")}>
         <div className={clsx("page-layout", "flex flex-col gap-8 justify-center")}>
-          <div className="flex justify-between" onClick={toggleMenu}>
-            <Link className="text-5xl" href={ERoutes.INTRO}>
-              <Image src="/logo.png" alt="TN-logo" width={135} height={30} />
-            </Link>
-            <div>Close</div>
+          <div className="flex justify-between">
+            <img alt="TN-logo" src="/logo.png" width={100} height={30} />
+            <span onClick={toggleMenu}>Close</span>
           </div>
 
           <div className="flex flex-col justify-center items-center gap-3">
-            {headerLinks.map(({id, path, title}) =>
-              <Link key={id} href={path}>
-                {title}
+            {headerLinks.map(({coordinates, id, path, title}) =>
+              <Link
+                duration={SCROLL_DURATION}
+                key={id}
+                offset={coordinates} 
+                onClick={toggleMenu}
+                smooth
+                spy={true} 
+                to={path}
+              >
+                <span>
+                  {title}
+                </span>
               </Link>
             )}
           </div>
