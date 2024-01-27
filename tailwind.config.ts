@@ -16,6 +16,8 @@ const config: Config = {
         gray: {
           DEFAULT: '#ADB7BE',
           'light-1': '#8d8d8d',
+          'light-mode': '#334155',
+          'light-mode-2': '#f4f4f4',
           'dark-1': '#262626',
         },
         yellow: '#feda00',
@@ -36,6 +38,7 @@ const config: Config = {
       },
       zIndex: {
         1: '1',
+        5: '5',
       },
     },
   },

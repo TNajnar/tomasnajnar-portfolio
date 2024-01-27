@@ -1,21 +1,33 @@
 /* #region Layout/Header */
 
+.header {
+  @apply sticky top-0 z-10 py-4;
+  @apply bg-white border-b border-gray-light-mode;
+  @apply dark:bg-black dark:border-gray;
+}
+
 .wrapper {
   @apply hidden;
   @apply desktop:flex items-center gap-6 text-xl;
+  @apply text-gray-light-mode dark:text-gray;
+}
+
+.headerItem {
+  @apply cursor-pointer hover:text-black dark:hover:text-white;
 }
 
 .wrapper > :nth-child(3) {
   @apply flex justify-center items-center p-1;
-  @apply order-998;
-  @apply bg-gradient-to-r from-yellow to-gray-light-1;
-  @apply hover:text-white hover:to-yellow;
+  @apply order-998 border bg-gradient-to-r;
+  @apply from-gray-light-mode to-gray hover:to-gray-light-mode;
+  @apply dark:from-yellow dark:to-gray-light-1 dark:hover:to-yellow dark:hover:text-white;
+
 }
 
 .mobileWrapper {
   @apply absolute z-10;
   @apply px-4 py-7 w-full h-fit;
-  @apply text-xl bg-black;
+  @apply text-xl bg-white dark:bg-black;
 }
 
 .isOpen {
@@ -35,8 +47,14 @@
 
 /* #region Introduction */
 
+.introWrapper {
+  @apply flex flex-col gap-2 desktop:gap-4 pb-10 w-full;
+  @apply font-semibold text-center sm:text-start;
+  @apply text-custom-title sm:text-5xl desktop:text-8xl;
+}
+
 .typeAnimation {
-  @apply text-custom-title sm:text-5xl desktop:text-8xl h-24;
+  @apply text-custom-title sm:text-5xl desktop:text-8xl h-9 desktop:h-24;
 }
 
 /* #endregion */
@@ -44,7 +62,7 @@
 /* #region Projects */
 
 .projectsWrapper {
-  @apply relative w-96 h-52 overflow-hidden rounded-lg;
+  @apply relative w-96 h-52 overflow-hidden shadow-md rounded-lg;
   @apply flex-shrink-0 flex-grow-0;
 }
 
@@ -59,11 +77,25 @@
 }
 
 .projectsWrapper:where(:hover) > .mask {
-  @apply bg-gray/30;
+  @apply bg-gray/40;
 }
 
 .projectsWrapper:where(:hover) > .viewIcon {
   @apply block cursor-pointer;
+}
+
+.projectsWrapper:where(:hover) > .description {
+  @apply absolute bottom-3 right-3 z-1 text-black;
+}
+
+/* #endregion */
+
+/* #region Shared */
+
+.socialWrapper {
+  @apply p-2 border-gray-light-mode border-2 rounded-full;
+  @apply bg-white hover:border-black hover:text-black;
+  @apply dark:bg-gray-dark-1 dark:hover:border-white dark:hover:text-white;
 }
 
 /* #endregion */

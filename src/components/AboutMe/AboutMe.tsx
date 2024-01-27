@@ -1,20 +1,20 @@
-import { ReactElement, forwardRef } from "react";
+import { ReactElement } from "react";
 import { aboutDescription, aboutTitle } from "./AboutData";
 
-const AboutMe = forwardRef<HTMLDivElement>((_, ref): ReactElement => (
-  <div className="grid desktop:grid-cols-2 gap-6" ref={ref}>
-    <div className="border border-white h-96 text-center">
-      Here will be my Image
+const AboutMe = (): ReactElement => (
+  <section className="grid desktop:grid-cols-2 gap-6" id="about">
+    <div className="flex justify-center w-full h-96 overflow-hidden text-center rounded-md shadow-lg">
+      <img src="/beach.jpg" className="object-cover w-full h-full" />
     </div>
     <div>
-      <h2 className="pb-4 bg-gradient-to-r from-yellow to-gray-light-1 to-70% text-transparent bg-clip-text text-3xl">
+      <h2 className="pb-4 bg-gradient-to-r from-yellow to-gray-light-1 to-70% text-black dark:text-transparent bg-clip-text text-3xl">
         {aboutTitle}
       </h2>
-      <p>
+      <p className="text-gray-light-mode dark:text-gray">
         {aboutDescription}
       </p>
     </div>
-  </div>
-));
+  </section>
+);
 
 export default AboutMe;

@@ -15,7 +15,7 @@ const technologies: Array<TTechStack> = [
 ];
 
 const Technologies = (): ReactElement => (
-  <div className="flex gap-16 desktop:justify-around p-4 w-full overflow-x-auto bg-gray-dark-1 rounded-2xl">
+  <section className="flex gap-16 desktop:justify-around p-4 w-full overflow-x-auto bg-gray-light-mode-2 dark:bg-gray-dark-1 rounded-2xl shadow-md">
     {technologies.map((tech) => {
       const {color, id, icon: TechLogo} = tech;
       
@@ -26,7 +26,7 @@ const Technologies = (): ReactElement => (
         />
       );
     })}
-  </div>
+  </section>
 );
 
 export default Technologies;

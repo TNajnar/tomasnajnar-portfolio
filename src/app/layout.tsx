@@ -2,6 +2,7 @@ import { ReactNode } from "react";
 import { Metadata } from "next";
 import { Footer, Header } from "@/components";
 import '@/styles/index.css'
+import DarkThemeProvider from "./DarkThemeProvider";
 
 export const metadata: Metadata = {
   title: 'Tomáš Najnar',
@@ -12,18 +13,18 @@ interface IProps {
   children: ReactNode;
 }
 
-const RootLayout = ({ children }: IProps) => {
-  return (
-    <html lang="en">
-      <body>
+const RootLayout = ({ children }: IProps) => (
+  <html lang="en" suppressHydrationWarning>
+    <body>
+      <DarkThemeProvider>
         <Header />
-        <main className="mainComponent" suppressHydrationWarning>
+        <main className="mainComponent">
           {children}
         </main>
         <Footer />
-      </body>
-    </html>
-  );
-};
+      </DarkThemeProvider>
+    </body>
+  </html>
+);
 
 export default RootLayout;

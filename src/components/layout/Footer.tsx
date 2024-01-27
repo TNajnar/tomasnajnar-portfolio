@@ -1,19 +1,29 @@
-import Link from "next/link"
+"use client"
+import { Link, animateScroll } from "react-scroll";
 import { SocialIcons } from "../shared";
 import { headerLinks } from "./LayoutData";
+import { SCROLL_DURATION, SCROLL_OPTIONS } from "@/utils/consts";
 import clsx from "clsx";
 
 const Footer = () => (
   <div className="border-t border-gray">
     <div className={clsx("page-layout", "footerWrapper")}>
       <div className="flex flex-col items-start gap-4 text-xl desktop:flex-row desktop:items-center">
-        <Link className="pr-3" href="#">
+        <div className="pr-3 cursor-pointer" onClick={(): void => animateScroll.scrollToTop(SCROLL_OPTIONS)}>
           <img alt="TN-logo" src="/logo.png" width={100} height={30} />
-        </Link>
-        {headerLinks.map(({path, title}) => 
-          <Link className="hover:text-white" href={path} key={title}>
+        </div>
+        {headerLinks.map(({coordinates, id, path, title}) => 
+          <Link
+            className="headerItem text-gray-light-mode dark:text-gray"
+            duration={SCROLL_DURATION}
+            key={id}
+            offset={coordinates} 
+            smooth
+            spy={true} 
+            to={path}
+          >
             {title}
-          </Link>
+          </Link> 
         )}
       </div>
 

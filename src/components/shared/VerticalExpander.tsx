@@ -5,7 +5,7 @@ interface IProps {
   children: ReactElement | Array<ReactElement>;
   className?: string;
   isOpen?: boolean;
-}
+};
 
 const VerticalExpandabler = ({ children, className, isOpen = false }: IProps): ReactElement => (
   <div className={clsx('default-transition',

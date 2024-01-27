@@ -1,3 +1,6 @@
+@tailwind components;
+@tailwind utilities;
+
 .page-layout {
   width: 100%;
   max-width: 616px;
@@ -11,10 +14,30 @@
   }
 }
 
-.mainComponent {
-  @apply flex flex-col items-center;
+@layer components {
+  .buttonGradient {
+    @apply border bg-gradient-to-r;
+    @apply from-gray-light-mode to-gray hover:to-gray-light-mode;
+    @apply dark:from-yellow dark:to-gray-light-1 dark:hover:to-yellow dark:hover:text-white;
+  }
+
+  .button {
+    @apply bg-white text-lg text-gray-light-mode hover:text-black;
+    @apply dark:text-gray dark:bg-black dark:hover:text-white;
+  }
+
+  .greeting {
+    @apply from-gray-light-mode to-gray hover:to-gray-light-mode;
+    @apply text-black bg-gradient-to-r dark:from-yellow dark:to-gray-light-1 dark:to-70% text-transparent bg-clip-text;
+  }
+
+  .mainComponent {
+    @apply flex flex-col items-center;
+  }
 }
 
-.default-transition {
-  @apply transform transition-all duration-300;
+@layer utilities {
+  .default-transition {
+    @apply transform transition-all duration-300;
+  }
 }

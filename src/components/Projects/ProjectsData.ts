@@ -1,10 +1,10 @@
 import { GrView } from "react-icons/gr";
 import { ERoutes } from "@/utils/enums";
-import { TMyProjects } from "@/utils/types";
+import { TMyProject } from "@/utils/types";
 
 export const projectTitle: string = 'Projects'
 
-export const myProjects: Array<TMyProjects> = [
+export const myProjects: Array<TMyProject> = [
   {
     alt: "regiojethotels.cz",
     id: 44,

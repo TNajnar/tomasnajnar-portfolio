@@ -2,13 +2,14 @@ import { IconType } from 'react-icons/lib';
 
 /* #region Layout */
 
-export type THeaderLinks = {
+export type THeaderLink = {
+  coordinates: number;
   id: number;
   path: string;
   title: string;
 };
 
-export type TSocialIcons = {
+export type TSocialIcon = {
   id: number;
   icon: IconType;
   url: string;
@@ -28,7 +29,7 @@ export type TTechStack = {
 
 /* #region Projects */
 
-export type TMyProjects = {
+export type TMyProject = {
   alt: string;
   description?: string;
   id: number;
@@ -49,5 +50,13 @@ export type TInputData = {
   placeHolder: string;
 }
 
+/* #endregion */
+
+/* #region Sroll Option */
+
+export type TScrollOpt = {
+  duration: number,
+  smooth: boolean,  
+}
 
 /* #endregion */

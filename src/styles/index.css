@@ -7,14 +7,18 @@
 html,
 body {
   @apply font-sans font-medium;
-
+  
   padding: 0;
   margin: 0;
   min-width: 320px;
   min-height: 100dvh;
-  background-color: #111111; /* #111111 */  /* 121212 */ /* #080808 */ 
   font-size: 100%;
-  color: #ADB7BE;
   -webkit-font-smoothing: antialiased;
   scroll-behavior: smooth;
+}
+
+@layer base {
+  body {
+    @apply bg-white text-black dark:bg-black dark:text-gray;  /* #111111 */  /* 121212 */ /* #080808 */ 
+  }
 }
