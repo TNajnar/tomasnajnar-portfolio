@@ -1,8 +1,9 @@
 import { ReactElement } from "react"
 import { useLockBodyScroll } from "react-use";
 import { headerLinks } from "@/components/layout/LayoutData";
-import { SCROLL_DURATION, SCROLL_OPTIONS } from "@/utils/consts";
-import { Link, animateScroll } from "react-scroll";
+import { SCROLL_DURATION } from "@/utils/consts";
+import { SocialIcons } from "@/components/shared";
+import { Link } from "react-scroll";
 import clsx from "clsx";
 
 interface IProps {
@@ -39,6 +40,7 @@ const MobileMenu = ({ open, toggleMenu }: IProps): ReactElement => {
               </Link>
             )}
           </div>
+          <SocialIcons className="self-center" />
         </div>
       </nav>
 
