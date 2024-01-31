@@ -3,13 +3,8 @@ import { ReactElement, useEffect } from "react";
 import { useLocalStorage } from "react-use";
 import { DarkModeSwitch } from "react-toggle-dark-mode";
 import { useTheme } from "next-themes";
-import clsx from "clsx";
 
-interface IProps {
-  className?: string;
-}
-
-const ThemeSwitcher = ({ className }: IProps): ReactElement => {
+const ThemeSwitcher = (): ReactElement => {
   const [isDarkTheme, setDarkTheme] = useLocalStorage("isDarkTheme", true);
   const { setTheme, resolvedTheme } = useTheme();
 
@@ -24,7 +19,7 @@ const ThemeSwitcher = ({ className }: IProps): ReactElement => {
 
   return (
     <DarkModeSwitch
-      className={clsx("order-last", className)}
+      className="order-last"
       checked={isDarkTheme || false}
       moonColor="#ADB7BE"
       onChange={(checked: boolean): void => setDarkTheme(checked)}

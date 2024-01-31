@@ -29,7 +29,7 @@ export type TTechStack = {
 
 /* #region Projects */
 
-export type TMyProject = {
+export type TProject = {
   alt: string;
   description?: string;
   id: number;
@@ -37,6 +37,11 @@ export type TMyProject = {
   path: string;
   style?: string;
   url?: string;
+};
+
+export type TCardVariant = {
+  y: number;
+  opacity: number;
 };
 
 /* #endregion */
@@ -48,7 +53,7 @@ export type TInputData = {
   label: string;
   name: string;
   placeHolder: string;
-}
+};
 
 /* #endregion */
 
@@ -57,6 +62,6 @@ export type TInputData = {
 export type TScrollOpt = {
   duration: number,
   smooth: boolean,  
-}
+};
 
 /* #endregion */
