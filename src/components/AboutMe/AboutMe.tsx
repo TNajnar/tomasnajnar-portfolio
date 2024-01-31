@@ -1,5 +1,5 @@
 import { ReactElement } from "react";
-import { aboutDescription, aboutTitle } from "./AboutData";
+import { aboutDescription, aboutTitle, education, school } from "./AboutData";
 
 const AboutMe = (): ReactElement => (
   <section className="grid desktop:grid-cols-2 gap-6" id="about">
@@ -16,10 +16,8 @@ const AboutMe = (): ReactElement => (
       </p>
 
       <ul className="pt-4 list-disc">
-        <h4 className="mb-2 w-fit text-lg border-b">Education</h4>
-        <li className="ml-4">
-          Bachelor's degree from Mendel University in Brno with a specialization in Information Technology
-        </li>
+        <h4 className="mb-2 w-fit text-lg border-b">{education}</h4>
+        <li className="ml-4">{school}</li>
       </ul>
     </div>
   </section>
