@@ -2,6 +2,6 @@ export const aboutDescription: string = "Lorem ipsum dolor sit amet, consectetue
 
 export const aboutTitle: string = "About me";
 
-export const education: string = "Bachelor's degree from Mendel University in Brno with a specialization in Information Technology";
+export const aboutSchool: string = "Bachelor's degree from Mendel University in Brno with a specialization in Information Technology";
 
-export const school: string = "Education";
+export const education: string = "Education";

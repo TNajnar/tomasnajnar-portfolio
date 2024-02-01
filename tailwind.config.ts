@@ -27,6 +27,7 @@ const config: Config = {
       },
       height: {
         dscreen: '100dvh',
+        projectH: '300px',
       },
       order: {
         '998': '998'
@@ -35,6 +36,9 @@ const config: Config = {
         sm: '576px',
         md: '768px',
         desktop: '1224px',
+      },
+      width: {
+        'projectW': '500px'
       },
       zIndex: {
         1: '1',
