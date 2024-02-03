@@ -1,6 +1,5 @@
 import { ReactElement } from "react";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
 import { TProject } from "@/utils/types";
 import clsx from "clsx";
 
@@ -14,7 +13,7 @@ const Project = ({
 }: TProject): ReactElement => url ? (
   <Link className="projectsWrapper" href={url} target="_blank">
     <img alt={alt} className={clsx(style, "w-full h-full object-fill")} src={path} />
-    <span className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-black text-xl font-bold">
+    <span className="projectDescription">
       {description}
     </span>    
     {!!ViewIcon && <ViewIcon className="viewIcon" />}
@@ -24,7 +23,7 @@ const Project = ({
 ) : (
   <div className="projectsWrapper">
     <img alt={alt} className={clsx(style, "w-full h-full object-fill")} src={path} />
-    <span className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-black text-xl font-bold">
+    <span className="projectDescription">
       {description}
     </span>
     <span className="description">{alt}</span>

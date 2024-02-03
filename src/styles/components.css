@@ -73,6 +73,11 @@
   @apply w-6 h-6 text-black;
 }
 
+.projectDescription {
+  @apply absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2;
+  @apply text-black text-xl font-bold;
+}
+
 .mask {
   @apply absolute top-0 w-full h-full hover:blur-sm;
 }
