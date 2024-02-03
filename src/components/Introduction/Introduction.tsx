@@ -3,7 +3,7 @@ import { ReactElement } from "react"
 import { TypeAnimation } from "react-type-animation"
 import { MdKeyboardDoubleArrowDown } from "react-icons/md";
 import { description, greeting } from "./IntroData";
-import { ERoutes } from "@/utils/enums";
+import { EScrollTo } from "@/utils/enums";
 import { Link } from "react-scroll";
 import { COORDINATES, SCROLL_DURATION } from "@/utils/consts";
 
@@ -45,7 +45,7 @@ const Introduction = (): ReactElement => (
       />
     </div>
 
-    <Link duration={SCROLL_DURATION} offset={COORDINATES} smooth to={ERoutes.ABOUT_ME}>
+    <Link duration={SCROLL_DURATION} offset={COORDINATES} smooth to={EScrollTo.ABOUT_ME}>
       <MdKeyboardDoubleArrowDown
         className="block w-9 h-9 animate-bounce cursor-pointer"
         type="button"
