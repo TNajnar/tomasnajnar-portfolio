@@ -1,10 +1,10 @@
 import { ReactElement } from "react"
 import { useLockBodyScroll } from "react-use";
 import { headerLinks } from "@/components/layout/LayoutData";
-import { SCROLL_DURATION } from "@/utils/consts";
+import { SCROLL_DURATION, SCROLL_OPTIONS } from "@/utils/consts";
 import { SocialIcons } from "@/components/shared";
 import { LongLogo } from "@/components/layout/logos";
-import { Link } from "react-scroll";
+import { Link, animateScroll } from "react-scroll";
 import clsx from "clsx";
 
 interface IProps {
@@ -15,12 +15,17 @@ interface IProps {
 const MobileMenu = ({ open, toggleMenu }: IProps): ReactElement => {
   useLockBodyScroll(open);
   
+  const handleScroll = (): void => {
+    animateScroll.scrollToTop(SCROLL_OPTIONS);
+    toggleMenu();
+  };
+
   return (
     <>
       <nav className={clsx("default-transition mobileWrapper", open ? "isOpen" : "isClose")}>
         <div className={clsx("page-layout", "flex flex-col gap-8 justify-center")}>
           <div className="flex justify-between items-center">
-            <LongLogo className="w-24 h-10 desktop:w-32 desktop:h-14 fill-black dark:fill-gray" />
+            <LongLogo className="w-24 h-10 desktop:w-32 desktop:h-14 fill-black dark:fill-gray" onClick={handleScroll} />
             <span onClick={toggleMenu}>Close</span>
           </div>
 
