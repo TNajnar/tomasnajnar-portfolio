@@ -8,10 +8,10 @@ import clsx from "clsx";
 
 const technologies: Array<TTechStack> = [
   { color: 'text-yellow', id: 77, icon: IoLogoJavascript },
-  { color: 'text-[#000]', id: 78, icon: TbBrandNextjs },
-  { color: 'text-[#087ea4]', id: 79, icon: FaReact },
-  { color: 'text-[#38bdf8]', id: 80, icon: SiTailwindcss },
-  { color: 'text-[#2f74c0]', id: 81, icon: SiTypescript },
+  { color: 'text-next', id: 78, icon: TbBrandNextjs },
+  { color: 'text-react', id: 79, icon: FaReact },
+  { color: 'text-css', id: 80, icon: SiTailwindcss },
+  { color: 'text-ts', id: 81, icon: SiTypescript },
 ];
 
 const Technologies = (): ReactElement => (
@@ -21,7 +21,7 @@ const Technologies = (): ReactElement => (
       
       return (
         <TechLogo
-          className={clsx(color, "flex-shrink-0 flex-grow-0 w-32 h-32")}
+          className={clsx(color, "flex-shrink-0 flex-grow-0 w-24 h-24 desktop:w-32 desktop:h-32")}
           key={id}
         />
       );

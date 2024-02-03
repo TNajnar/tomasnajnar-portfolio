@@ -21,6 +21,10 @@ const config: Config = {
           'dark-1': '#262626',
         },
         yellow: '#feda00',
+        next: '#000',
+        react: '#087ea4',
+        css: '#38bdf8',
+        ts: '#2f74c0',
       },
       fontSize: {
         'custom-title': '34px',
