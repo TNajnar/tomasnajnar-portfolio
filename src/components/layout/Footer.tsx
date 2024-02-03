@@ -1,8 +1,9 @@
 "use client"
 import { Link, animateScroll } from "react-scroll";
 import { SocialIcons } from "../shared";
-import { headerLinks } from "./LayoutData";
+import { LongLogo } from "./logos";
 import { SCROLL_DURATION, SCROLL_OPTIONS } from "@/utils/consts";
+import { headerLinks } from "./LayoutData";
 import clsx from "clsx";
 
 const Footer = () => (
@@ -10,8 +11,9 @@ const Footer = () => (
     <div className={clsx("page-layout", "footerWrapper")}>
       <div className="flex flex-col items-start gap-4 text-xl desktop:flex-row desktop:items-center">
         <div className="pr-3 cursor-pointer" onClick={(): void => animateScroll.scrollToTop(SCROLL_OPTIONS)}>
-          <img alt="TN-logo" src="/logo.png" width={100} height={30} />
+          <LongLogo className="w-24 h-10 desktop:w-32 desktop:h-14 fill-black dark:fill-gray" />
         </div>
+
         {headerLinks.map(({coordinates, id, path, title}) => 
           <Link
             className="headerItem text-gray-light-mode dark:text-gray"

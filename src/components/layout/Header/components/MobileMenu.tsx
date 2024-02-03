@@ -3,6 +3,7 @@ import { useLockBodyScroll } from "react-use";
 import { headerLinks } from "@/components/layout/LayoutData";
 import { SCROLL_DURATION } from "@/utils/consts";
 import { SocialIcons } from "@/components/shared";
+import { LongLogo } from "@/components/layout/logos";
 import { Link } from "react-scroll";
 import clsx from "clsx";
 
@@ -18,8 +19,8 @@ const MobileMenu = ({ open, toggleMenu }: IProps): ReactElement => {
     <>
       <nav className={clsx("default-transition mobileWrapper", open ? "isOpen" : "isClose")}>
         <div className={clsx("page-layout", "flex flex-col gap-8 justify-center")}>
-          <div className="flex justify-between">
-            <img alt="TN-logo" src="/logo.png" width={100} height={30} />
+          <div className="flex justify-between items-center">
+            <LongLogo className="w-24 h-10 desktop:w-32 desktop:h-14 fill-black dark:fill-gray" />
             <span onClick={toggleMenu}>Close</span>
           </div>
 

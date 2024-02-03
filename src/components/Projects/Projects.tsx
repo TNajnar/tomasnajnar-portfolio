@@ -23,7 +23,7 @@ const Projects = (): ReactElement => {
         {projectTitle}
       </h2>
 
-      <div className="flex flex-col" ref={ref}>
+      <div className="flex flex-col desktop:flex-row" ref={ref}>
         {myProjects.map((projectItem, index) =>
           <motion.div
             animate={isInView ? "animate" : "initial"}

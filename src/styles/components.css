@@ -1,7 +1,7 @@
 /* #region Layout/Header */
 
 .header {
-  @apply sticky top-0 z-10 py-4;
+  @apply sticky top-0 z-10 py-2 desktop:py-4;
   @apply bg-white border-b border-gray-light-mode;
   @apply dark:bg-black dark:border-gray;
 }
@@ -31,7 +31,7 @@
 }
 
 .isOpen {
-  @apply top-0 border-b border-white;
+  @apply top-0 border-b border-gray-light-mode dark:border-white;
 }
 
 .isClose {
