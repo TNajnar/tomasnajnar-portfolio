@@ -1,5 +1,5 @@
 "use client"
-import { ReactElement } from "react"
+import { ReactElement } from "react";
 import { AboutMe, Contact, Introduction, Projects, Technologies } from "@/components";
 import clsx from "clsx";
 

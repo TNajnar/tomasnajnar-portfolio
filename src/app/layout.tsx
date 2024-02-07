@@ -1,12 +1,13 @@
 import { ReactNode } from "react";
 import { Metadata } from "next";
+import DarkThemeProvider from "./DarkThemeProvider";
 import { Footer, Header } from "@/components";
 import '@/styles/index.css'
-import DarkThemeProvider from "./DarkThemeProvider";
 
 export const metadata: Metadata = {
   title: 'Tomáš Najnar',
   description: 'My portfolio',
+  icons: '/tn-logo.svg'
 }
 
 interface IProps {

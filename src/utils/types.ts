@@ -17,6 +17,16 @@ export type TSocialIcon = {
 
 /* #endregion */
 
+/* #region Contact */
+
+export type TContactValues = {
+  email: string;
+  message: string;
+  name: string;
+}
+
+/* #endregion */
+
 /* #region Technologies */
 
 export type TTechStack = {

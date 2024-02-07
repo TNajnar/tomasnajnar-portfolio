@@ -15,7 +15,7 @@ const ThemeSwitcher = (): ReactElement => {
       setTheme("light");
     };
 
-  }, [isDarkTheme, resolvedTheme])
+  }, [isDarkTheme, setTheme])
 
   return (
     <DarkModeSwitch

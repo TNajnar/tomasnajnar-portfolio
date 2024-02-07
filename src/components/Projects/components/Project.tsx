@@ -1,6 +1,5 @@
 import { ReactElement } from "react";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
 import { TProject } from "@/utils/types";
 import clsx from "clsx";
 

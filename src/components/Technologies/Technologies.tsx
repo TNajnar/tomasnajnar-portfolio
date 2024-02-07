@@ -1,4 +1,4 @@
-import { ReactElement } from "react"
+import { ReactElement } from "react";
 import { FaReact } from "react-icons/fa";
 import { SiTailwindcss, SiTypescript } from "react-icons/si";
 import { TbBrandNextjs } from "react-icons/tb";

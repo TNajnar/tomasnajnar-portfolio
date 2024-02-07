@@ -6,10 +6,13 @@ export const contactTitle: string = "Contact";
 
 export const sendMessage: string = "Send Message";
 
-export const inputsData: Array<TInputData> = [
-  { id: 1, label: "Name:*", name: "name", placeHolder: "Enter your name" },
-  { id: 2, label: "Email:*", name: "email", placeHolder: "Enter your email" },
-];
+export const emailTitle: string = "Email:*";
+export const email: string = 'email';
+export const emailPlaceHolder: string = "Enter your email";
+ 
+export const nameTitle: string = "Name:*";
+export const name: string = 'name';
+export const namePlaceHolder: string = "Enter your name";
 
 export const textArea: TInputData = {
   label: "Message:*",
