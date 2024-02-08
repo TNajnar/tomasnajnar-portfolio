@@ -1,34 +1,27 @@
 "use client"
-import { ReactElement } from "react";
-import { Form, Formik } from "formik";
+import { ReactElement, useState } from "react";
+import sendEmail from "@/api/sendEmail";
 import { contactSchema } from "@/utils/schema";
-import { TContactValues } from "@/utils/types";
-import postEmail from "@/api/postEmail";
-import { contactDescription, contactTitle, email, emailPlaceHolder, emailTitle, name, namePlaceHolder, nameTitle, sendMessage, textArea } from "./ContactData";
+import { TContactData } from "@/utils/types";
+import { EFormStatus } from "@/utils/enums";
+import { contactDescription, contactTitle } from "./ContactData";
+import { Formik } from "formik";
 import clsx from "clsx";
+import ContactForm from "./components/ContactForm";
 
-const initialValues: TContactValues = {
+const initialValues: TContactData = {
   email: '',
   message: '',
   name: '',
 };
 
-enum FormStatus {
-  ERROR = 'error',
-  SENT = 'sent',
-  UNSENT = 'unsent',
-}
-
 const Contact = (): ReactElement => {
-  const handleSubmit = async (values: TContactValues): Promise<void> => {
-    console.log('values: ', values)
-    try {
-      const response = await postEmail(values);
-      
-      response.json();
-    } catch (error) {
-      console.error(`Failed to parse JSON response: ${error}`);
-    }
+  const [formStatus , setFormStatus] = useState<EFormStatus>(EFormStatus.UNSENT);
+
+  const handleSubmit = async (contactData: TContactData): Promise<void> => {
+    const response = await sendEmail(contactData);
+    
+    setFormStatus(response.ok ? EFormStatus.SENT : EFormStatus.ERROR);
   };
   
   return (
@@ -45,60 +38,13 @@ const Contact = (): ReactElement => {
 
         <Formik initialValues={initialValues} onSubmit={handleSubmit} validationSchema={contactSchema}>
           {({ isSubmitting, handleChange, handleBlur, values }) => (
-            <Form className="flex flex-col gap-5 desktop:w-3/5">
-              <label className="flex flex-col gap-2">
-                <label>{nameTitle}</label>
-                <input
-                  className="input"
-                  id={name}
-                  name={name}
-                  onChange={handleChange}
-                  placeholder={namePlaceHolder}
-                  required
-                  type="text"
-                  value={values.name}
-                />
-              </label>
-
-              <label className="flex flex-col gap-2">
-                <span>{emailTitle}</span>
-                <input
-                  className="input"
-                  id={email}
-                  name={email}
-                  onBlur={handleBlur}
-                  onChange={handleChange}
-                  placeholder={emailPlaceHolder}
-                  required
-                  type="email"
-                  value={values.email}
-                />
-              </label>
- 
-              <label className="flex flex-col gap-2 pb-3">
-                <span>{textArea.label}</span>
-                <textarea
-                  className="p-3 h-36 bg-white border border-gray-light-mode rounded-lg text-black placeholder:text-black"
-                  id={textArea.name}
-                  name={textArea.name}
-                  onBlur={handleBlur}
-                  onChange={handleChange}
-                  placeholder={textArea.placeHolder}
-                  required
-                  value={values.message}
-                />
-              </label>
-
-              <button
-                className={clsx("self-start p-1 w-full sm:w-max", "buttonGradient")}
-                disabled={isSubmitting}
-                type="submit"
-              >
-                <div className={clsx("px-8 py-3 w-full h-full", "button")}>
-                  {sendMessage}
-                </div>
-              </button>
-            </Form>
+            <ContactForm
+              formStatus={formStatus}
+              handleBlur={handleBlur}
+              handleChange={handleChange}
+              isSubmitting={isSubmitting}
+              values={values}
+            />
           )}
         </Formik>
       </div>

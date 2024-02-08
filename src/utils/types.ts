@@ -19,7 +19,7 @@ export type TSocialIcon = {
 
 /* #region Contact */
 
-export type TContactValues = {
+export type TContactData = {
   email: string;
   message: string;
   name: string;
