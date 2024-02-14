@@ -69,7 +69,7 @@ const ContactForm = ({
     )}
 
     {formStatus === EFormStatus.SENT ? (
-      <div>Sent</div>     // TODO Alert component
+      <div className="text-green-700">Sent</div>     // TODO Alert component
     ) : (
       <button
         className={clsx("self-start p-1 w-full sm:w-max", "buttonGradient")}
