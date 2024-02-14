@@ -47,11 +47,11 @@ const Header = (): ReactElement => {
             <SocialIcons />
           </nav>
 
-          <ThemeSwitcher />
           <FiMenu 
             className="block desktop:hidden w-8 h-8 text-gray-light-mode dark:text-gray"
             onClick={toggleMenu}
           />
+          <ThemeSwitcher />
         </div>
       </div>
 

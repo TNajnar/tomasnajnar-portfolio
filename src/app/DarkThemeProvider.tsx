@@ -7,7 +7,7 @@ interface IProps {
 };
 
 const DarkThemeProvider = ({ children }: IProps) => (
-  <ThemeProvider attribute="class">
+  <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
     {children}
   </ThemeProvider>
 );

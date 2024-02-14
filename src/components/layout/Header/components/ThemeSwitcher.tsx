@@ -1,30 +1,31 @@
 "use client"
-import { ReactElement, useEffect } from "react";
+import { ReactElement, useEffect, useState } from "react";
 import { useTheme } from "next-themes";
-import { useLocalStorage } from "react-use";
-import { DarkModeSwitch } from "react-toggle-dark-mode";
+import { MdDarkMode, MdLightMode } from "react-icons/md";
 
 const ThemeSwitcher = (): ReactElement => {
-  const [isDarkTheme, setDarkTheme] = useLocalStorage("isDarkTheme", true);
-  const { setTheme, resolvedTheme } = useTheme();
-
+  const [mounted, setMounted] = useState(false)
+  const { setTheme, resolvedTheme } = useTheme()
+  
   useEffect(() => {
-    if (isDarkTheme) {
-      setTheme("dark");
-    } else {
-      setTheme("light");
-    };
-
-  }, [isDarkTheme, setTheme])
+    setMounted(true);
+  }, []);
 
   return (
-    <DarkModeSwitch
-      className="order-last w-8 h-8 sm:w-9 sm:h-9 desktop:w-10 desktop:h-10 fill-gray-light-mode dark:fill-gray"
-      checked={isDarkTheme || false}
-      moonColor="#ADB7BE"
-      onChange={(checked: boolean): void => setDarkTheme(checked)}
-      sunColor="#334155"
-    />
+    <div className="flex items-center w-10">
+      {mounted &&  
+        <button
+          onClick={(): void => setTheme(resolvedTheme === 'dark' ? 'light' : 'dark')}
+          className="transition duration-300 ease-in-out transform hover:scale-110"
+        >
+          {resolvedTheme === 'dark' ? (
+            <MdLightMode className="w-8 h-8 sm:w-9 sm:h-9 desktop:w-10 desktop:h-10" />
+          ) : (
+            <MdDarkMode className="w-8 h-8 sm:w-9 sm:h-9 desktop:w-10 desktop:h-10 fill-gray-light-mode" />
+          )}
+        </button>
+      }
+    </div>
   );
 };
 
