@@ -3,8 +3,9 @@ import { aboutDescription, aboutTitle, education, aboutSchool } from "./AboutDat
 
 const AboutMe = (): ReactElement => (
   <section className="grid desktop:grid-cols-2 gap-6" id="about">
-    <div className="flex justify-center w-full h-96 overflow-hidden text-center rounded-md shadow-lg">
-      <img src="/beach.jpg" className="object-cover w-full h-full" />
+    <div className="flex justify-center justify-self-center w-fit max-h-96 overflow-hidden text-center rounded-md shadow-lg">
+    {/* TODO */}
+      <img src="/meDsk.jpg" alt="me" className=" object-contain w-full h-full" />
     </div>
 
     <div>

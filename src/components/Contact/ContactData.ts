@@ -1,6 +1,6 @@
 import { TInputData } from "@/utils/types";
 
-export const contactDescription: string = "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nullam lectus justo, vulputate eget mollis sed, tempor sed magna. Etiam dui sem, fermentum vitae, sagittis id, malesuada in, quam.";
+export const contactDescription: string = "Do you have ideas, projects or visions that we could turn into a great reality together? Or are you looking for a partner to collaborate on new and exciting projects? Contact me, I am open to new opportunities.";
 
 export const contactTitle: string = "Contact";
 

@@ -1,3 +1,3 @@
-export const description: string = 'I shape the digital future as an expert Front-End Engineer. Through the use of modern coding standards and cutting-edge technologies, I actively develop efficient, resilient, and user-friendly front-end solutions. My commitment lies in providing seamless user interactions and establishing a solid digital foundation to support your business.';
+export const description: string = 'I am a frontend engineer specializing in the design and development of web and mobile applications using modern technologies. My main goal is to create robust, scalable and user-friendly applications with modern graphical elements. These apps will not only provide a competitive advantage, but will also be an invaluable tool for you to effectively manage and support your business development.';
 
 export const greeting: string = 'Hi, I am';
