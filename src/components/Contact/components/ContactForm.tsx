@@ -4,6 +4,8 @@ import { TContactData } from "@/utils/types";
 import { Form } from "formik"
 import { email, emailPlaceHolder, emailTitle, name, namePlaceHolder, nameTitle, sendMessage, textArea } from "../ContactData"
 import clsx from "clsx";
+import Loader from "@/components/ui/Loader";
+import { FaCheck } from "react-icons/fa";
 
 interface IProps {
   formStatus: EFormStatus;
@@ -69,15 +71,18 @@ const ContactForm = ({
     )}
 
     {formStatus === EFormStatus.SENT ? (
-      <div className="text-green-700">Sent</div>     // TODO Alert component
+      <div className="flex items-center gap-3 text-xl text-green-700">
+        <span>Email was sent!</span>
+        <FaCheck className="text-green-700" />
+      </div>
     ) : (
       <button
-        className={clsx("self-start p-1 w-full sm:w-max", "buttonGradient")}
+        className={clsx("self-start p-1 w-full sm:w-contactButton", "buttonGradient")}
         disabled={isSubmitting}
         type="submit"
       >
-        <div className={clsx("px-8 py-3 w-full h-full", "button")}>
-          {sendMessage}
+        <div className={clsx("flex items-center justify-center px-8 py-3 w-full h-full", "button")}>
+         {isSubmitting ? <Loader className="w-7 h-7" /> : sendMessage}
         </div>
       </button>
     )}

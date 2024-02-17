@@ -1,13 +1,13 @@
 "use client"
 import { ReactElement, useState } from "react";
+import ContactForm from "./components/ContactForm";
+import { Formik, FormikHelpers } from "formik";
 import sendEmail from "@/api/sendEmail";
 import { contactSchema } from "@/utils/schema";
 import { TContactData } from "@/utils/types";
 import { EFormStatus } from "@/utils/enums";
 import { contactDescription, contactTitle } from "./ContactData";
-import { Formik } from "formik";
 import clsx from "clsx";
-import ContactForm from "./components/ContactForm";
 
 const initialValues: TContactData = {
   email: '',
@@ -18,14 +18,17 @@ const initialValues: TContactData = {
 const Contact = (): ReactElement => {
   const [formStatus , setFormStatus] = useState<EFormStatus>(EFormStatus.UNSENT);
 
-  const handleSubmit = async (contactData: TContactData): Promise<void> => {
+  const handleSubmit = async (
+    contactData: TContactData, { resetForm }: FormikHelpers<TContactData>
+  ): Promise<void> => {
     const response = await sendEmail(contactData);
     
     setFormStatus(response.ok ? EFormStatus.SENT : EFormStatus.ERROR);
+    resetForm();
   };
   
   return (
-    <section className="py-20 w-full bg-gray-light-mode-2 dark:bg-gray-dark-1" id="contact">
+    <section className="py-20 w-full desktop:h-contact bg-gray-light-mode-2 dark:bg-gray-dark-1" id="contact">
       <div className={clsx("page-layout", "flex flex-col desktop:flex-row justify-between gap-11 w-full")}>
         <div className="flex flex-col gap-4 desktop:w-2/5">
           <h2 className="bg-gradient-to-r from-yellow from-70% to-gray-light-1 text-black dark:text-transparent bg-clip-text text-3xl">

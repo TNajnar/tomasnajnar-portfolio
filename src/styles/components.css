@@ -107,3 +107,38 @@
 }
 
 /* #endregion */
+
+/* #region Shared */
+
+.svg > circle {
+  @apply stroke-gray-light-mode stroke-[8];
+}
+
+.defaultSize {
+  @apply w-12 h-12;
+}
+
+.svg > circle + circle {
+  @apply stroke-gray stroke-[8] origin-center -rotate-90;
+
+  stroke-linecap: round;
+  stroke-dasharray: 145;
+  stroke-dashoffset: 145;
+  animation: dash 3s linear infinite;
+}
+
+@keyframes dash {
+  50% {
+    stroke-dashoffset: 0;
+  }
+
+  98% {
+    stroke-dashoffset: -145;
+  }
+
+  100% {
+    stroke-dashoffset: -145;
+  }
+}
+
+/* #endregion */

@@ -30,8 +30,12 @@ const config: Config = {
         'custom-title': '34px',
       },
       height: {
+        contact: '633px',
         dscreen: '100dvh',
         projectH: '300px',
+      },
+      maxHeight: {
+        aboutMeImg: '490px',
       },
       order: {
         '998': '998'
@@ -42,7 +46,8 @@ const config: Config = {
         desktop: '1224px',
       },
       width: {
-        'projectW': '500px'
+        contactButton: '195px',
+        projectW: '500px',
       },
       zIndex: {
         1: '1',

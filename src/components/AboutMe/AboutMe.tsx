@@ -1,24 +1,30 @@
 import { ReactElement } from "react";
-import { aboutDescription, aboutTitle, education, aboutSchool } from "./AboutData";
+import { aboutTitle, education, aboutSchool, aboutHeading, aboutMyLife, middleDescription } from "./AboutData";
 
 const AboutMe = (): ReactElement => (
   <section className="grid desktop:grid-cols-2 gap-6" id="about">
-    <div className="flex justify-center justify-self-center w-fit max-h-96 overflow-hidden text-center rounded-md shadow-lg">
+    <div className="flex justify-center justify-self-center w-fit max-h-aboutMeImg overflow-hidden text-center rounded-md shadow-lg">
     {/* TODO */}
-      <img src="/meDsk.jpg" alt="me" className=" object-contain w-full h-full" />
+      <img src="/mezk.jpg" alt="me" className=" object-contain w-full h-full" />
     </div>
 
     <div>
       <h2 className="pb-4 bg-gradient-to-r from-yellow to-gray-light-1 to-70% text-black dark:text-transparent bg-clip-text text-3xl">
         {aboutTitle}
       </h2>
-      <p className="text-gray-light-mode dark:text-gray">
-        {aboutDescription}
-      </p>
+      <div className="text-gray-light-mode dark:text-gray">
+        <p>{aboutHeading}</p> <br/>
+        <p>{middleDescription}</p> <br/>
+        <p>{aboutMyLife}</p>
+      </div>
 
       <ul className="pt-4 list-disc">
-        <h4 className="mb-2 w-fit text-lg">{education}</h4>
-        <li className="ml-4">{aboutSchool}</li>
+        <h4 className="mb-2 w-fit text-lg">
+          {education}
+        </h4>
+        <li className="ml-4 text-gray-light-mode dark:text-gray">
+          {aboutSchool}
+        </li>
       </ul>
     </div>
   </section>
