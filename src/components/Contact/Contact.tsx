@@ -34,7 +34,7 @@ const Contact = (): ReactElement => {
           <h2 className="bg-gradient-to-r from-yellow from-70% to-gray-light-1 text-black dark:text-transparent bg-clip-text text-3xl">
             {contactTitle}
           </h2>
-          <p className="text-base desktop:text-xl text-gray-light-mode dark:text-gray">
+          <p className="text-base desktop:text-xl text-gray-light-modeText dark:text-gray">
             {contactDescription}
           </p>
         </div>

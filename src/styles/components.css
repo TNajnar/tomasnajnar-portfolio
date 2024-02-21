@@ -2,14 +2,14 @@
 
 .header {
   @apply sticky top-0 z-10 py-2 desktop:py-4;
-  @apply bg-white border-b border-gray-light-mode;
+  @apply bg-white border-b border-gray-light-modeText;
   @apply dark:bg-black dark:border-gray;
 }
 
 .wrapper {
   @apply hidden;
-  @apply desktop:flex items-center gap-6 text-xl;
-  @apply text-gray-light-mode dark:text-gray;
+  @apply desktop:flex items-center gap-6 text-lg;
+  @apply text-gray-light-modeText dark:text-gray;
 }
 
 .headerItem {
@@ -18,8 +18,8 @@
 
 .wrapper > :nth-child(3) {
   @apply flex justify-center items-center p-1;
-  @apply order-998 border bg-gradient-to-r;
-  @apply from-gray-light-mode to-gray hover:to-gray-light-mode;
+  @apply order-998 rounded-lg border bg-gradient-to-r;
+  @apply from-gray-light-modeText to-gray hover:to-gray-light-modeText;
   @apply dark:from-yellow dark:to-gray-light-1 dark:hover:to-yellow dark:hover:text-white;
 
 }
@@ -31,7 +31,7 @@
 }
 
 .isOpen {
-  @apply top-0 border-b border-gray-light-mode dark:border-white;
+  @apply top-0 border-b border-gray-light-modeText dark:border-white;
 }
 
 .isClose {
@@ -54,7 +54,8 @@
 }
 
 .typeAnimation {
-  @apply text-custom-title sm:text-5xl desktop:text-8xl h-9 desktop:h-24;
+  @apply h-9 desktop:h-24;
+  @apply text-custom-title sm:text-5xl desktop:text-8xl;
 }
 
 /* #endregion */
@@ -93,52 +94,8 @@
 /* #region Contact */
 
 .input {
-  @apply p-3 bg-white border border-gray-light-mode rounded-lg text-black placeholder:text-black;
+  @apply p-3 bg-white border border-gray-light-modeText rounded-lg text-black placeholder:text-black;
 }
 
 /* #endregion */
 
-/* #region Shared */
-
-.socialWrapper {
-  @apply p-2 border-gray-light-mode border-2 rounded-full;
-  @apply bg-white hover:border-black hover:text-black;
-  @apply dark:bg-gray-dark-1 dark:hover:border-white dark:hover:text-white;
-}
-
-/* #endregion */
-
-/* #region Shared */
-
-.svg > circle {
-  @apply stroke-gray-light-mode stroke-[8];
-}
-
-.defaultSize {
-  @apply w-12 h-12;
-}
-
-.svg > circle + circle {
-  @apply stroke-gray stroke-[8] origin-center -rotate-90;
-
-  stroke-linecap: round;
-  stroke-dasharray: 145;
-  stroke-dashoffset: 145;
-  animation: dash 3s linear infinite;
-}
-
-@keyframes dash {
-  50% {
-    stroke-dashoffset: 0;
-  }
-
-  98% {
-    stroke-dashoffset: -145;
-  }
-
-  100% {
-    stroke-dashoffset: -145;
-  }
-}
-
-/* #endregion */

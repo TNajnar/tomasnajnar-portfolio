@@ -17,23 +17,65 @@
 @layer components {
   .buttonGradient {
     @apply border bg-gradient-to-r;
-    @apply from-gray-light-mode to-gray hover:to-gray-light-mode;
+    @apply from-gray-light-modeText to-gray hover:to-gray-light-modeText;
     @apply dark:from-yellow dark:to-gray-light-1 dark:hover:to-yellow dark:hover:text-white;
   }
 
   .button {
-    @apply bg-white text-lg text-gray-light-mode hover:text-black;
+    @apply bg-white text-lg text-gray-light-modeText hover:text-black;
     @apply dark:text-gray dark:bg-black dark:hover:text-white;
   }
 
   .greeting {
-    @apply from-gray-light-mode to-gray hover:to-gray-light-mode;
+    @apply from-gray-light-modeText to-gray hover:to-gray-light-modeText;
     @apply text-black bg-gradient-to-r dark:from-yellow dark:to-gray-light-1 dark:to-70% text-transparent bg-clip-text;
   }
 
   .mainComponent {
     @apply flex flex-col items-center;
   }
+
+  /* #region Shared */
+  
+  .socialWrapper {
+    @apply p-2 rounded-full border-2 border-gray-dark-1 dark:border-gray-light-1;
+    @apply bg-white hover:border-black hover:text-black;
+    @apply dark:bg-gray-dark-1 dark:hover:border-white dark:hover:text-white;
+  }
+
+  .svg > circle {
+    @apply stroke-gray-light-modeText stroke-[8];
+  }
+  
+  .defaultSize {
+    @apply w-12 h-12;
+  }
+  
+  .svg > circle + circle {
+    @apply stroke-gray stroke-[8] origin-center -rotate-90;
+  
+    stroke-linecap: round;
+    stroke-dasharray: 145;
+    stroke-dashoffset: 145;
+    animation: dash 3s linear infinite;
+  }
+  
+  @keyframes dash {
+    50% {
+      stroke-dashoffset: 0;
+    }
+  
+    98% {
+      stroke-dashoffset: -145;
+    }
+  
+    100% {
+      stroke-dashoffset: -145;
+    }
+  }
+
+  /* #endregion */
+
 }
 
 @layer utilities {

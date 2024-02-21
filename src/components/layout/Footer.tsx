@@ -16,7 +16,7 @@ const Footer = () => (
 
         {headerLinks.map(({coordinates, id, path, title}) => 
           <Link
-            className="headerItem text-gray-light-mode dark:text-gray"
+            className="headerItem text-gray-light-modeText dark:text-gray"
             duration={SCROLL_DURATION}
             key={id}
             offset={coordinates} 

@@ -19,7 +19,7 @@ const Projects = (): ReactElement => {
   
   return (
     <section id="projects">
-      <h2 className="pb-8 bg-gradient-to-r from-yellow from-70% to-black text-gray-light-mode dark:text-transparent bg-clip-text text-center text-3xl">
+      <h2 className="pb-8 bg-gradient-to-r from-yellow from-70% to-black text-gray-modeText dark:text-transparent bg-clip-text text-center text-3xl">
         {projectTitle}
       </h2>
 
@@ -39,7 +39,7 @@ const Projects = (): ReactElement => {
       </div>
 
       <Link
-        className="flex items-center gap-5 w-fit pt-8 text-gray-light-mode dark:text-yellow text-xl border-b border-transparent hover:border-gray-light-mode dark:hover:border-yellow"
+        className="flex items-center gap-5 w-fit pt-8 text-gray-modeText dark:text-yellow text-xl border-b border-transparent hover:border-gray-light-mode dark:hover:border-yellow"
         href={ERoutes.GIT_HUB}
         target="_blank"
       >

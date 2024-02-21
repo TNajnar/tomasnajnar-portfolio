@@ -12,7 +12,7 @@ const AboutMe = (): ReactElement => (
       <h2 className="pb-4 bg-gradient-to-r from-yellow to-gray-light-1 to-70% text-black dark:text-transparent bg-clip-text text-3xl">
         {aboutTitle}
       </h2>
-      <div className="text-gray-light-mode dark:text-gray">
+      <div className="text-gray-light-modeText dark:text-gray">
         <p>{aboutHeading}</p> <br/>
         <p>{middleDescription}</p> <br/>
         <p>{aboutMyLife}</p>
@@ -22,7 +22,7 @@ const AboutMe = (): ReactElement => (
         <h4 className="mb-2 w-fit text-lg">
           {education}
         </h4>
-        <li className="ml-4 text-gray-light-mode dark:text-gray">
+        <li className="ml-4 text-gray-light-modeText dark:text-gray">
           {aboutSchool}
         </li>
       </ul>

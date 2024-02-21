@@ -14,9 +14,9 @@ const config: Config = {
         black: '#111111',
         white: '#FFF',
         gray: {
-          DEFAULT: '#ADB7BE',
+          DEFAULT: '#F0F0F0',  // color for dark mode text
           'light-1': '#8d8d8d',
-          'light-mode': '#334155',
+          'light-modeText': '#000',  //334155, color for light mode text
           'light-mode-2': '#f4f4f4',
           'dark-1': '#262626',
         },

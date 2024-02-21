@@ -11,7 +11,7 @@ import { FiMenu } from "react-icons/fi";
 import { headerLinks } from "../LayoutData";
 import clsx from "clsx";
 
-const longLogo = "hidden md:block my-1 w-24 h-10 desktop:w-32 desktop:h-14 fill-black dark:fill-gray";
+const longLogo = "hidden md:block w-24 h-10 desktop:w-28 desktop:h-12 fill-black dark:fill-gray";
 const shortLogo = "block md:hidden w-14 h-14 desktop:w-32 desktop:h-14 fill-black dark:fill-gray";
 
 const Header = (): ReactElement => {
@@ -48,7 +48,7 @@ const Header = (): ReactElement => {
           </nav>
 
           <FiMenu 
-            className="block desktop:hidden w-8 h-8 text-gray-light-mode dark:text-gray"
+            className="block desktop:hidden w-8 h-8 text-gray-light-modeText dark:text-gray"
             onClick={toggleMenu}
           />
           <ThemeSwitcher />

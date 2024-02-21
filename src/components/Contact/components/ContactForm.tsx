@@ -55,7 +55,7 @@ const ContactForm = ({
     <label className="flex flex-col gap-2 pb-3">
       <span>{textArea.label}</span>
       <textarea
-        className="p-3 h-36 bg-white border border-gray-light-mode rounded-lg text-black placeholder:text-black"
+        className="p-3 h-36 bg-white border border-gray-light-modeText rounded-lg text-black placeholder:text-black"
         id={textArea.name}
         name={textArea.name}
         onBlur={handleBlur}

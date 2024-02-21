@@ -19,6 +19,6 @@ body {
 
 @layer base {
   body {
-    @apply bg-white text-black dark:bg-black dark:text-gray;  /* #111111 */  /* 121212 */ /* #080808 */ 
+    @apply bg-white text-black dark:bg-black dark:text-gray;
   }
 }

@@ -8,7 +8,7 @@ interface IProps {
 }
 
 const SocialIcons = ({ className }: IProps): ReactElement => (
-  <div className={clsx("flex items-center gap-3 text-gray-light-mode dark:text-gray", className)}>
+  <div className={clsx("flex items-center gap-3 text-gray-modeText dark:text-gray", className)}>
     {SOCIAL_ICONS.map((socialIcon) => {
       const { id, icon: SocialIcon, url } = socialIcon;
 

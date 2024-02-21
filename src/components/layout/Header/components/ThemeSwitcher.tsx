@@ -21,7 +21,7 @@ const ThemeSwitcher = (): ReactElement => {
           {resolvedTheme === 'dark' ? (
             <MdLightMode className="w-8 h-8 sm:w-9 sm:h-9 desktop:w-10 desktop:h-10" />
           ) : (
-            <MdDarkMode className="w-8 h-8 sm:w-9 sm:h-9 desktop:w-10 desktop:h-10 fill-gray-light-mode" />
+            <MdDarkMode className="w-8 h-8 sm:w-9 sm:h-9 desktop:w-10 desktop:h-10 fill-gray-modeText" />
           )}
         </button>
       }
