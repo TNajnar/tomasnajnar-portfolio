@@ -77,13 +77,11 @@ const ContactForm = ({
       </div>
     ) : (
       <button
-        className={clsx("self-start p-1 w-full sm:w-contactButton", "buttonGradient")}
+        className={clsx("button", "bg-gray-dark-1 dark:bg-yellow")}
         disabled={isSubmitting}
         type="submit"
       >
-        <div className={clsx("flex items-center justify-center px-8 py-3 w-full h-full", "button")}>
-         {isSubmitting ? <Loader className="w-7 h-7" /> : sendMessage}
-        </div>
+        {isSubmitting ? <Loader className="w-7 h-7" /> : sendMessage}
       </button>
     )}
   </Form>

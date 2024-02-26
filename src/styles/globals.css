@@ -15,15 +15,9 @@
 }
 
 @layer components {
-  .buttonGradient {
-    @apply border bg-gradient-to-r;
-    @apply from-gray-light-modeText to-gray hover:to-gray-light-modeText;
-    @apply dark:from-yellow dark:to-gray-light-1 dark:hover:to-yellow dark:hover:text-white;
-  }
-
   .button {
-    @apply bg-white text-lg text-gray-light-modeText hover:text-black;
-    @apply dark:text-gray dark:bg-black dark:hover:text-white;
+    @apply self-start py-3 px-4 w-full text-black rounded-lg sm:w-contactButton;
+    @apply text-white dark:text-black;
   }
 
   .greeting {

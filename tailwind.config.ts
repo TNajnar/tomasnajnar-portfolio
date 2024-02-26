@@ -18,10 +18,10 @@ const config: Config = {
         white: '#FFF',
         gray: {
           DEFAULT: '#F0F0F0',  // color for dark mode text
-          'light-1': '#8d8d8d',
+          'light-1': '#8d8d8d', // light mode gradient
           'light-modeText': '#000',  //334155, color for light mode text
-          'light-mode-2': '#f4f4f4',
-          'dark-1': '#262626',  // accessories, dark mode
+          'light-mode-2': '#D9D9D9',  // accessories, light mode
+          'dark-1': '#323232',  // accessories, dark mode
         },
         yellow: '#feda00',
         next: '#000',
