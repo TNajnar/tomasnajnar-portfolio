@@ -3,9 +3,9 @@ import { EFormStatus } from "@/utils/enums";
 import { TContactData } from "@/utils/types";
 import { Form } from "formik"
 import { email, emailPlaceHolder, emailTitle, name, namePlaceHolder, nameTitle, sendMessage, textArea } from "../ContactData"
-import clsx from "clsx";
 import Loader from "@/components/ui/Loader";
 import { FaCheck } from "react-icons/fa";
+import clsx from "clsx";
 
 interface IProps {
   formStatus: EFormStatus;
