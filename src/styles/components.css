@@ -16,13 +16,14 @@
   @apply cursor-pointer hover:text-black dark:hover:text-white;
 }
 
-.wrapper > :nth-child(3) {
+/* TODO ? 
+  .wrapper > :nth-child(3) {
   @apply flex justify-center items-center p-1;
   @apply order-998 rounded-lg border bg-gradient-to-r;
   @apply from-gray-light-modeText to-gray hover:to-gray-light-modeText;
   @apply dark:from-yellow dark:to-gray-light-1 dark:hover:to-yellow dark:hover:text-white;
 
-}
+} */
 
 .mobileWrapper {
   @apply absolute z-10;
@@ -49,13 +50,19 @@
 
 .introWrapper {
   @apply flex flex-col gap-2 desktop:gap-4 pb-10 w-full;
-  @apply font-semibold text-center sm:text-start;
+  @apply font-semibold text-start;
   @apply text-custom-title sm:text-5xl desktop:text-8xl;
 }
 
 .typeAnimation {
   @apply h-9 desktop:h-24;
   @apply text-custom-title sm:text-5xl desktop:text-8xl;
+}
+
+.buttonContact {
+  @apply block py-2 w-full desktop:w-max desktop:px-12;
+  @apply border-3 dark:border-2 text-center rounded-lg md:text-xl;
+  @apply text-black dark:text-yellow border-yellow dark:border-white;
 }
 
 /* #endregion */

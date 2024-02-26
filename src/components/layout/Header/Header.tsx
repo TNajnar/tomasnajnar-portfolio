@@ -11,8 +11,8 @@ import { FiMenu } from "react-icons/fi";
 import { headerLinks } from "../LayoutData";
 import clsx from "clsx";
 
-const longLogo = "hidden md:block w-24 h-10 desktop:w-28 desktop:h-12 fill-black dark:fill-gray";
-const shortLogo = "block md:hidden w-14 h-14 desktop:w-32 desktop:h-14 fill-black dark:fill-gray";
+const longLogo = "hidden md:block w-24 h-10 sm:h-14 desktop:w-28 desktop:h-12 fill-black dark:fill-gray";
+const shortLogo = "block md:hidden w-14 h-11 sm:h-14 desktop:w-32 desktop:h-14 fill-black dark:fill-gray";
 
 const Header = (): ReactElement => {
   const [open, toggleMenu] = useToggle(false);
@@ -26,7 +26,7 @@ const Header = (): ReactElement => {
           <ShortLogo alt="TN-white" className={shortLogo} />
         </div>
 
-        <div className="flex gap-8 items-center">
+        <div className="flex items-center gap-4 sm:gap-6 desktop:gap-8">
           <nav className="wrapper">
             {headerLinks.map(({coordinates, id, path, title}) => 
               <Link
@@ -44,11 +44,11 @@ const Header = (): ReactElement => {
               </Link>
             )}
 
-            <SocialIcons />
+            {/* TODO?  <SocialIcons withBorder /> */}
           </nav>
 
           <FiMenu 
-            className="block desktop:hidden w-8 h-8 text-gray-light-modeText dark:text-gray"
+            className="block desktop:hidden w-7 h-7 text-gray-light-modeText dark:text-gray"
             onClick={toggleMenu}
           />
           <ThemeSwitcher />

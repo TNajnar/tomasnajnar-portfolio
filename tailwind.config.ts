@@ -10,6 +10,9 @@ const config: Config = {
   darkMode: "class",
   theme: {
     extend: {
+      borderWidth: {
+        3: '3px',
+      },
       colors: {
         black: '#111111',
         white: '#FFF',
@@ -18,7 +21,7 @@ const config: Config = {
           'light-1': '#8d8d8d',
           'light-modeText': '#000',  //334155, color for light mode text
           'light-mode-2': '#f4f4f4',
-          'dark-1': '#262626',
+          'dark-1': '#262626',  // accessories, dark mode
         },
         yellow: '#feda00',
         next: '#000',

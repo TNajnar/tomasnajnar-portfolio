@@ -2,14 +2,14 @@
 import { ReactElement } from "react"
 import { TypeAnimation } from "react-type-animation"
 import { MdKeyboardDoubleArrowDown } from "react-icons/md";
-import { description, greeting } from "./IntroData";
+import { contact, description, greeting } from "./IntroData";
 import { EScrollTo } from "@/utils/enums";
 import { Link } from "react-scroll";
-import { COORDINATES, SCROLL_DURATION, TECHNOLOGIES } from "@/utils/consts";
-import clsx from "clsx";
+import { CONTACT_COORDINATES, COORDINATES, SCROLL_DURATION } from "@/utils/consts";
+import { SocialIcons } from "../shared";
 
 const Introduction = (): ReactElement => (
-  <section className="flex flex-col items-center gap-6 desktop:gap-20" id="intro">
+  <section className="flex flex-col items-start gap-10 desktop:gap-20" id="intro">
       <div>
         <h1 className="introWrapper">
           <span className="greeting">
@@ -31,25 +31,24 @@ const Introduction = (): ReactElement => (
           />
         </h1>
 
-        <p className="pb-10 w-9/12 text-base sm:text-xl text-gray-light-modeText dark:text-gray">
+        <p className="pb-10 desktop:w-9/12 text-base sm:text-xl text-gray-light-modeText dark:text-gray">
           {description}
         </p>
 
-        {/* <div className="flex gap-8">
-          {TECHNOLOGIES.map((tech) => {
-            const {color, id, icon: TechLogo} = tech;
-      
-            return (
-              <TechLogo
-                className={clsx(color, "flex-shrink-0 flex-grow-0 w-24 h-24 desktop:w-20 desktop:h-20")}
-                key={id}
-              />
-            );
-          })}
-        </div> */}
+        <SocialIcons className="pb-9" classNameSize="w-6 h-6 md:w-8 md:h-8 desktop:w-10 desktop:h-10" />
+
+        <Link
+          className="buttonContact"
+          duration={SCROLL_DURATION}
+          offset={CONTACT_COORDINATES}
+          smooth
+          to={EScrollTo.CONTACT}
+        >
+          {contact}
+        </Link>
       </div>
 
-    <Link duration={SCROLL_DURATION} offset={COORDINATES} smooth to={EScrollTo.ABOUT_ME}>
+    <Link className="self-center" duration={SCROLL_DURATION} offset={COORDINATES} smooth to={EScrollTo.ABOUT_ME}>
       <MdKeyboardDoubleArrowDown
         className="w-9 h-9 animate-bounce cursor-pointer"
         type="button"

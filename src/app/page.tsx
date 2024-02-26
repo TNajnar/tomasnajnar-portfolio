@@ -5,7 +5,7 @@ import clsx from "clsx";
 
 const Page = (): ReactElement => (
   <>
-    <div className={clsx("page-layout", "flex flex-col gap-28 py-24")}>
+    <div className={clsx("page-layout", "flex flex-col gap-14 py-10 sm:gap-28 sm:py-24")}>
       <Introduction />
       {/* <Technologies /> */}
       <AboutMe />

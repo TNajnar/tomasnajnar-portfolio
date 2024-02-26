@@ -5,21 +5,29 @@ import clsx from "clsx";
 
 interface IProps {
   className?: string;
+  classNameSize?: string;
+  defaultSize?: boolean;
+  withBorder?: boolean;
 }
 
-const SocialIcons = ({ className }: IProps): ReactElement => (
-  <div className={clsx("flex items-center gap-3 text-gray-modeText dark:text-gray", className)}>
+const SocialIcons = ({ className, classNameSize, defaultSize, withBorder = false }: IProps): ReactElement => (
+  <div className={clsx(
+      "flex items-center text-gray-modeText dark:text-gray",
+      withBorder ? "gap-3" : "gap-10",
+      className,
+    )}
+  >
     {SOCIAL_ICONS.map((socialIcon) => {
       const { id, icon: SocialIcon, url } = socialIcon;
 
       return (
         <Link
-          className="socialWrapper"
+          className={clsx(withBorder && "socialWrapper")}
           href={url}
           key={id}
           target="_blank"
         >
-          <SocialIcon className="w-6 h-6" />
+          <SocialIcon className={clsx(classNameSize, defaultSize && "w-6 h-6")} />
         </Link>
       )
     })}

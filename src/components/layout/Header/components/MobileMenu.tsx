@@ -46,7 +46,7 @@ const MobileMenu = ({ open, toggleMenu }: IProps): ReactElement => {
               </Link>
             )}
           </div>
-          <SocialIcons className="self-center" />
+          <SocialIcons className="self-center" defaultSize />
         </div>
       </nav>
 

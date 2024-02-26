@@ -6,7 +6,7 @@ import { TbBrandNextjs } from "react-icons/tb";
 import { SiTailwindcss, SiTypescript } from "react-icons/si";
 
 {/* Constants below are for scrolling */ }
-export const CONTACT_COORDINATES: number = 30;
+export const CONTACT_COORDINATES: number = 0;
 export const COORDINATES: number = -210;
 export const SCROLL_DURATION: number = 200;
 export const SCROLL_OPTIONS: TScrollOpt = {
