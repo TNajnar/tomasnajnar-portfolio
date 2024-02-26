@@ -29,7 +29,7 @@ const Footer = () => (
         )}
       </div>
 
-      <SocialIcons />
+      <SocialIcons classNameSize="hover:scale-110" defaultSize />
     </div>
   </div>
 );

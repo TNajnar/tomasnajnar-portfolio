@@ -23,11 +23,10 @@ const Projects = (): ReactElement => {
         {projectTitle}
       </h2>
 
-      <div className="flex flex-col desktop:flex-row" ref={ref}>
+      <div className="grid desktop:grid-cols-3 gap-4" ref={ref}>
         {myProjects.map((projectItem, index) =>
           <motion.div
             animate={isInView ? "animate" : "initial"}
-            className="flex gap-5 p-3"
             key={index}
             initial="initial"
             variants={cardVariants}
@@ -39,7 +38,7 @@ const Projects = (): ReactElement => {
       </div>
 
       <Link
-        className="flex items-center gap-5 w-fit pt-8 text-gray-modeText dark:text-yellow text-xl border-b border-transparent hover:border-gray-light-mode dark:hover:border-yellow"
+        className="flex items-center gap-5 w-fit pt-8 text-gray-modeText dark:text-yellow text-xl border-b border-transparent hover:border-black dark:hover:border-yellow"
         href={ERoutes.GIT_HUB}
         target="_blank"
       >

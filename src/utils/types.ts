@@ -40,6 +40,7 @@ export type TTechStack = {
 /* #region Projects */
 
 export type TProject = {
+  about: string;
   alt: string;
   description?: string;
   id: number;

@@ -1,9 +1,12 @@
 import { ReactElement } from "react";
 import Link from "next/link";
 import { TProject } from "@/utils/types";
+import { used } from "../ProjectsData";
+import { TechStack } from "@/components/shared";
 import clsx from "clsx";
 
 const Project = ({
+  about,
   alt,
   description,
   icon: ViewIcon,
@@ -12,22 +15,44 @@ const Project = ({
   url,
 }: TProject): ReactElement => url ? (
   <Link className="projectsWrapper" href={url} target="_blank">
-    <img alt={alt} className={clsx(style, "w-full h-full object-fill")} src={path} />
-    <span className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-black text-xl font-bold">
-      {description}
-    </span>    
-    {!!ViewIcon && <ViewIcon className="viewIcon" />}
-    <span className="description">{alt}</span>
-    <div className="mask" />
+    <div className="imgWrapper">
+      <img alt={alt} className="rounded-lg" src={path} />
+      <span className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-black text-xl font-bold">
+        {description}
+      </span>
+      {!!ViewIcon && <ViewIcon className="viewIcon" />}
+      <span className="description">{alt}</span>
+      <div className="mask" />
+    </div>
+
+    <span>
+      {about}
+    </span>
+
+    <div>
+      <span className="text-black dark:text-yellow">{used}</span>
+      <TechStack className="flex gap-3 py-2" />
+    </div>
   </Link>
 ) : (
   <div className="projectsWrapper">
-    <img alt={alt} className={clsx(style, "w-full h-full object-fill")} src={path} />
-    <span className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-black text-xl font-bold">
-      {description}
+    <div className="imgWrapper">
+      <img alt={alt} className={clsx(style, "rounded-lg")} src={path} />
+      <span className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-black text-xl font-bold">
+        {description}
+      </span>
+      <span className="description">{alt}</span>
+      <div className="mask" />
+    </div>
+
+    <span>
+      {about}
     </span>
-    <span className="description">{alt}</span>
-    <div className="mask" />
+
+    <div>
+      <span className="text-black dark:text-yellow">{used}</span>
+      <TechStack className="flex gap-3 py-2" />
+    </div>
   </div>
 );
 

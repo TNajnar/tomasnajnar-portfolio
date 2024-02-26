@@ -61,8 +61,9 @@
 
 .buttonContact {
   @apply block py-2 w-full desktop:w-max desktop:px-12;
+  @apply cursor-pointer;
   @apply border-3 dark:border-2 text-center rounded-lg md:text-xl;
-  @apply text-black dark:text-yellow border-yellow dark:border-white;
+  @apply text-black dark:text-yellow border-yellow-light-1 dark:border-white;
 }
 
 /* #endregion */
@@ -70,8 +71,13 @@
 /* #region Projects */
 
 .projectsWrapper {
-  @apply relative w-full h-full desktop:w-projectW desktop:h-projectH;
-  @apply overflow-hidden shadow-md rounded-lg;
+  @apply flex flex-col gap-4 p-3 w-full h-full overflow-hidden;
+  @apply bg-gray-light-1 dark:bg-gray-dark-1;
+  @apply shadow-md rounded-lg;
+}
+
+.imgWrapper {
+  @apply relative w-full h-full;
 }
 
 .viewIcon {
@@ -80,20 +86,25 @@
   @apply w-6 h-6 text-black;
 }
 
-.mask {
-  @apply absolute top-0 w-full h-full hover:blur-sm;
-}
-
-.projectsWrapper:where(:hover) > .mask {
-  @apply bg-gray/40;
-}
-
-.projectsWrapper:where(:hover) > .viewIcon {
+.projectsWrapper:where(:hover) > .imgWrapper .viewIcon {
   @apply block cursor-pointer;
 }
 
-.projectsWrapper:where(:hover) > .description {
-  @apply absolute bottom-3 right-3 z-1 text-black;
+.mask {
+  @apply absolute top-0 w-full h-full;
+}
+
+.projectsWrapper:where(:hover) > .imgWrapper .mask {
+  @apply bg-gray/40 blur-sm;
+}
+
+.description {
+  @apply hidden;
+  @apply absolute bottom-3 right-3 z-5 text-black;
+}
+
+.projectsWrapper:where(:hover) > .imgWrapper .description {
+  @apply block;
 }
 
 /* #endregion */

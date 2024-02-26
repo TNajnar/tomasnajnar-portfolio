@@ -28,7 +28,7 @@ const Contact = (): ReactElement => {
   };
   
   return (
-    <section className="py-20 w-full desktop:h-contact bg-gray-light-mode-2 dark:bg-gray-dark-1" id="contact">
+    <section className="py-20 w-full desktop:h-contact bg-gray-light-1 dark:bg-gray-dark-1" id="contact">
       <div className={clsx("page-layout", "flex flex-col desktop:flex-row justify-between gap-11 w-full")}>
         <div className="flex flex-col gap-4 desktop:w-2/5">
           <h2 className="bg-gradient-to-r from-yellow from-70% to-gray-light-1 text-black dark:text-transparent bg-clip-text text-3xl">

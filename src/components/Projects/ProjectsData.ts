@@ -6,6 +6,7 @@ export const projectTitle: string = 'Projects'
 
 export const myProjects: Array<TProject> = [
   {
+    about: "I have been working on project RegioJet Hotels. On my responsibility was",
     alt: "regiojethotels.cz",
     id: 44,
     icon: GrView,
@@ -13,12 +14,15 @@ export const myProjects: Array<TProject> = [
     url: ERoutes.REGIOJET_HOTELS
   },
   {
-    alt: "studentagency.cz",
+    about: "I have been working on project RegioJet Hotels. On my responsibility was",
+    alt: "new-studentagency.cz",
     description: "Comming soon...",
     id: 45,
     path: "/hotels.png",
     style: "bg-gray-dark-1 blur-sm"
   },
 ];
+
+export const used: string = 'What I use';
 
 export const gitHub: string = 'My GitHub';

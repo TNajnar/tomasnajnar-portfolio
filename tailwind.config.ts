@@ -18,12 +18,15 @@ const config: Config = {
         white: '#FFF',
         gray: {
           DEFAULT: '#F0F0F0',  // color for dark mode text
-          'light-1': '#8d8d8d', // light mode gradient
+          'light-1': '#D9D9D9', // accessories, light mode
           'light-modeText': '#000',  //334155, color for light mode text
-          'light-mode-2': '#D9D9D9',  // accessories, light mode
+          'light-mode-2': '#8d8d8d',  // light mode gradient
           'dark-1': '#323232',  // accessories, dark mode
         },
-        yellow: '#feda00',
+        yellow: {
+          DEFAULT: '#feda00',
+          'light-1': '#ffce00',  // light mode yellow
+        },
         next: '#000',
         react: '#087ea4',
         css: '#38bdf8',
