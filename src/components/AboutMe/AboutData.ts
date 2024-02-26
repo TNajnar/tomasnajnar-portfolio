@@ -9,3 +9,7 @@ export const aboutTitle: string = "About me";
 export const aboutSchool: string = "Bachelor's degree from Mendel University in Brno with a specialization in Information Technology";
 
 export const education: string = "Education";
+
+export const name: string = "Tomas Najnar";
+
+export const aboutWork: string = "Frontend Developer";

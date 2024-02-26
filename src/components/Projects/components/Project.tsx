@@ -17,9 +17,6 @@ const Project = ({
   <Link className="projectsWrapper" href={url} target="_blank">
     <div className="imgWrapper">
       <img alt={alt} className="rounded-lg" src={path} />
-      <span className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-black text-xl font-bold">
-        {description}
-      </span>
       {!!ViewIcon && <ViewIcon className="viewIcon" />}
       <span className="description">{alt}</span>
       <div className="mask" />
@@ -38,7 +35,7 @@ const Project = ({
   <div className="projectsWrapper">
     <div className="imgWrapper">
       <img alt={alt} className={clsx(style, "rounded-lg")} src={path} />
-      <span className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-black text-xl font-bold">
+      <span className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-full text-black text-xl text-center font-bold">
         {description}
       </span>
       <span className="description">{alt}</span>

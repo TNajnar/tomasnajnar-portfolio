@@ -1,10 +1,11 @@
 import { ReactElement } from "react";
 import { aboutTitle, education, aboutSchool, aboutHeading, aboutMyLife, middleDescription } from "./AboutData";
+import { Avatar } from "./components";
 
 const AboutMe = (): ReactElement => (
   <section className="grid desktop:grid-cols-2 gap-6" id="about">
-    <div className="flex justify-center justify-self-center w-fit max-h-aboutMeImg overflow-hidden text-center rounded-md shadow-lg">
     {/* TODO */}
+    <div className="hidden desktop:flex justify-center justify-self-center w-fit max-h-aboutMeImg overflow-hidden text-center rounded-md shadow-lg">
       <img src="/mezk.jpg" alt="me" className=" object-contain w-full h-full" />
     </div>
 
@@ -12,7 +13,10 @@ const AboutMe = (): ReactElement => (
       <h2 className="pb-4 bg-gradient-to-r from-yellow to-gray-light-1 to-70% text-black dark:text-transparent bg-clip-text text-3xl">
         {aboutTitle}
       </h2>
-      <div className="text-gray-light-modeText dark:text-gray">
+
+      <Avatar />
+
+      <div className="pt-5 text-gray-light-modeText dark:text-gray">
         <p>{aboutHeading}</p> <br/>
         <p>{middleDescription}</p> <br/>
         <p>{aboutMyLife}</p>
