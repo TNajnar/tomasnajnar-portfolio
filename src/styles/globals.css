@@ -16,6 +16,7 @@
 
 @layer components {
   .button {
+    @apply flex items-center justify-center;
     @apply self-start py-3 px-4 w-full text-black rounded-lg sm:w-contactButton;
     @apply text-white dark:text-black;
   }
