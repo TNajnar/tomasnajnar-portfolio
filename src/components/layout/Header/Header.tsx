@@ -3,7 +3,6 @@ import { ReactElement } from "react"
 import { useToggle } from "react-use";
 import { animateScroll, Link } from "react-scroll";
 import { MobileMenu } from "./components";
-import { SocialIcons } from "@/components/shared";
 import ThemeSwitcher from "./components/ThemeSwitcher";
 import { SCROLL_DURATION, SCROLL_OPTIONS } from "@/utils/consts";
 import { LongLogo, ShortLogo } from "../logos";

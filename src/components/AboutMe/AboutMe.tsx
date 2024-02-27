@@ -10,23 +10,23 @@ const AboutMe = (): ReactElement => (
     </div>
 
     <div>
-      <h2 className="pb-4 bg-gradient-to-r from-yellow to-gray-light-1 to-70% text-black dark:text-transparent bg-clip-text text-3xl">
+      <h2 className="pb-4 text-black dark:text-yellow text-3xl">
         {aboutTitle}
       </h2>
 
       <Avatar />
 
-      <div className="pt-5 text-gray-light-modeText dark:text-gray">
+      <div className="pt-5 text-gray-light-modeText2 dark:text-gray">
         <p>{aboutHeading}</p> <br/>
         <p>{middleDescription}</p> <br/>
         <p>{aboutMyLife}</p>
       </div>
 
       <ul className="pt-4 list-disc">
-        <h4 className="mb-2 w-fit text-lg">
+        <h4 className="mb-2 w-fit text-lg font-semibold">
           {education}
         </h4>
-        <li className="ml-4 text-gray-light-modeText dark:text-gray">
+        <li className="ml-4 text-gray-light-modeText2 dark:text-gray">
           {aboutSchool}
         </li>
       </ul>

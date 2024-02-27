@@ -27,7 +27,7 @@ const SocialIcons = ({ className, classNameSize, defaultSize, withBorder = false
           key={id}
           target="_blank"
         >
-          <SocialIcon className={clsx(classNameSize, defaultSize && "w-6 h-6")} />
+          <SocialIcon className={clsx(classNameSize, defaultSize && "w-6 h-6", "socialIcon")} />
         </Link>
       )
     })}

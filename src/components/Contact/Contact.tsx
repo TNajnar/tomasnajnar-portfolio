@@ -31,10 +31,10 @@ const Contact = (): ReactElement => {
     <section className="py-20 w-full desktop:h-contact bg-gray-light-1 dark:bg-gray-dark-1" id="contact">
       <div className={clsx("page-layout", "flex flex-col desktop:flex-row justify-between gap-11 w-full")}>
         <div className="flex flex-col gap-4 desktop:w-2/5">
-          <h2 className="bg-gradient-to-r from-yellow from-70% to-gray-light-1 text-black dark:text-transparent bg-clip-text text-3xl">
+          <h2 className="text-black dark:text-yellow text-3xl">
             {contactTitle}
           </h2>
-          <p className="text-base desktop:text-xl text-gray-light-modeText dark:text-gray">
+          <p className="text-base desktop:text-lg text-gray-light-modeText2 dark:text-gray">
             {contactDescription}
           </p>
         </div>

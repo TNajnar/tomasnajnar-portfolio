@@ -13,17 +13,8 @@
 }
 
 .headerItem {
-  @apply cursor-pointer hover:text-black dark:hover:text-white;
+  @apply cursor-pointer hover:text-gray-light-modeText2 dark:hover:text-white;
 }
-
-/* TODO ? 
-  .wrapper > :nth-child(3) {
-  @apply flex justify-center items-center p-1;
-  @apply order-998 rounded-lg border bg-gradient-to-r;
-  @apply from-gray-light-modeText to-gray hover:to-gray-light-modeText;
-  @apply dark:from-yellow dark:to-gray-light-1 dark:hover:to-yellow dark:hover:text-white;
-
-} */
 
 .mobileWrapper {
   @apply absolute z-10;

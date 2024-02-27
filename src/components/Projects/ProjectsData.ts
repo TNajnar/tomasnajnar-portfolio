@@ -18,7 +18,7 @@ export const myProjects: Array<TProject> = [
     alt: "new-studentagency.cz",
     description: "Comming soon...",
     id: 45,
-    path: "/hotels.png",
+    path: "/sa.png",
     style: "bg-gray-dark-1 blur-sm"
   },
 ];

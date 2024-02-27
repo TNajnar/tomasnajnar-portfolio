@@ -19,7 +19,7 @@ const Projects = (): ReactElement => {
   
   return (
     <section id="projects">
-      <h2 className="pb-8 bg-gradient-to-r from-yellow from-70% to-black text-gray-modeText dark:text-transparent bg-clip-text text-3xl">
+      <h2 className="pb-8 text-black dark:text-yellow text-3xl">
         {projectTitle}
       </h2>
 

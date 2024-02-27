@@ -5,6 +5,9 @@ import { used } from "../ProjectsData";
 import { TechStack } from "@/components/shared";
 import clsx from "clsx";
 
+const styleAbout = "text-gray-light-modeText2 dark:text-gray";
+const styleUsed = "font-semibold text-black dark:text-yellow";
+
 const Project = ({
   about,
   alt,
@@ -22,12 +25,12 @@ const Project = ({
       <div className="mask" />
     </div>
 
-    <span>
+    <span className={styleAbout}>
       {about}
     </span>
 
     <div>
-      <span className="text-black dark:text-yellow">{used}</span>
+      <span className={styleUsed}>{used}</span>
       <TechStack className="flex gap-3 py-2" />
     </div>
   </Link>
@@ -42,12 +45,12 @@ const Project = ({
       <div className="mask" />
     </div>
 
-    <span>
+    <span className={styleAbout}>
       {about}
     </span>
 
     <div>
-      <span className="text-black dark:text-yellow">{used}</span>
+      <span className={styleUsed}>{used}</span>
       <TechStack className="flex gap-3 py-2" />
     </div>
   </div>

@@ -11,7 +11,7 @@ const Footer = () => (
     <div className={clsx("page-layout", "footerWrapper")}>
       <div className="flex flex-col items-start gap-4 text-xl desktop:flex-row desktop:items-center">
         <div className="pr-3 cursor-pointer" onClick={(): void => animateScroll.scrollToTop(SCROLL_OPTIONS)}>
-          <LongLogo className="w-24 h-10 desktop:w-32 desktop:h-14 fill-black dark:fill-gray" />
+          <LongLogo className="w-24 h-10 sm:h-14 desktop:w-28 desktop:h-12 fill-black dark:fill-gray" />
         </div>
 
         {headerLinks.map(({coordinates, id, path, title}) => 
