@@ -20,6 +20,6 @@ const sendEmail = async (contactData: TContactData): Promise<Response> => {
   } catch (error) {
     throw new Error(`Failed to send login data: ${error}`);
   }
-}
+};
 
 export default sendEmail;

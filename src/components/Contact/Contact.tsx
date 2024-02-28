@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { ReactElement, useState } from "react";
 import ContactForm from "./components/ContactForm";
 import { Formik, FormikHelpers } from "formik";

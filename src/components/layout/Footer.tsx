@@ -1,4 +1,5 @@
-"use client"
+"use client";
+import { ReactElement } from "react";
 import { Link, animateScroll } from "react-scroll";
 import { SocialIcons } from "../shared";
 import { LongLogo } from "./logos";
@@ -6,7 +7,7 @@ import { SCROLL_DURATION, SCROLL_OPTIONS } from "@/utils/consts";
 import { headerLinks } from "./LayoutData";
 import clsx from "clsx";
 
-const Footer = () => (
+const Footer = (): ReactElement => (
   <div className="border-t border-gray">
     <div className={clsx("page-layout", "footerWrapper")}>
       <div className="flex flex-col items-start gap-4 text-xl desktop:flex-row desktop:items-center">

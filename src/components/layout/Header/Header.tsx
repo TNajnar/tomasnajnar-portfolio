@@ -1,5 +1,5 @@
-"use client"
-import { ReactElement } from "react"
+"use client";
+import { ReactElement } from "react";
 import { useToggle } from "react-use";
 import { animateScroll, Link } from "react-scroll";
 import { MobileMenu } from "./components";

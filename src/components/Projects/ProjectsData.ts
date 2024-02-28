@@ -2,7 +2,7 @@ import { ERoutes } from "@/utils/enums";
 import { TProject } from "@/utils/types";
 import { GrView } from "react-icons/gr";
 
-export const projectTitle: string = 'Projects'
+export const projectTitle: string = 'Projects';
 
 export const myProjects: Array<TProject> = [
   {

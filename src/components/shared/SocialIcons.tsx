@@ -1,4 +1,4 @@
-import { ReactElement } from "react"
+import { ReactElement } from "react";
 import Link from "next/link";
 import { SOCIAL_ICONS } from "@/utils/consts";
 import clsx from "clsx";
@@ -29,7 +29,7 @@ const SocialIcons = ({ className, classNameSize, defaultSize, withBorder = false
         >
           <SocialIcon className={clsx(classNameSize, defaultSize && "w-6 h-6", "socialIcon")} />
         </Link>
-      )
+      );
     })}
   </div>
 );

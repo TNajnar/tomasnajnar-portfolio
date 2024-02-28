@@ -1,6 +1,6 @@
-"use client"
-import { ReactElement } from "react"
-import { TypeAnimation } from "react-type-animation"
+"use client";
+import { ReactElement } from "react";
+import { TypeAnimation } from "react-type-animation";
 import { MdKeyboardDoubleArrowDown } from "react-icons/md";
 import { contact, description, greeting } from "./IntroData";
 import { EScrollTo } from "@/utils/enums";

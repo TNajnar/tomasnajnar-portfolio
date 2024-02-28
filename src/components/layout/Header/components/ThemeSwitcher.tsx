@@ -1,11 +1,11 @@
-"use client"
+"use client";
 import { ReactElement, useEffect, useState } from "react";
 import { useTheme } from "next-themes";
 import { MdDarkMode, MdLightMode } from "react-icons/md";
 
 const ThemeSwitcher = (): ReactElement => {
-  const [mounted, setMounted] = useState(false)
-  const { setTheme, resolvedTheme } = useTheme()
+  const [mounted, setMounted] = useState(false);
+  const { setTheme, resolvedTheme } = useTheme();
   
   useEffect(() => {
     setMounted(true);

@@ -34,4 +34,4 @@ export async function POST (request: NextRequest): Promise<NextResponse> {
   } catch (err) {
     return NextResponse.json({ message: `Failed to send email: ${err}` }, { status: 500 });
   }
-};
+}

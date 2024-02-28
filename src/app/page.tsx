@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { ReactElement } from "react";
 import { AboutMe, Contact, Introduction, Projects } from "@/components";
 import clsx from "clsx";

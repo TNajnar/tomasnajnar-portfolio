@@ -23,7 +23,7 @@ export type TContactData = {
   email: string;
   message: string;
   name: string;
-}
+};
 
 /* #endregion */
 

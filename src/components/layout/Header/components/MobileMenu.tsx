@@ -1,4 +1,4 @@
-import { ReactElement } from "react"
+import { ReactElement } from "react";
 import { useLockBodyScroll } from "react-use";
 import { headerLinks } from "@/components/layout/LayoutData";
 import { SCROLL_DURATION, SCROLL_OPTIONS } from "@/utils/consts";
@@ -10,7 +10,7 @@ import clsx from "clsx";
 interface IProps {
   open: boolean;
   toggleMenu: () => void;
-};
+}
 
 const MobileMenu = ({ open, toggleMenu }: IProps): ReactElement => {
   useLockBodyScroll(open);
@@ -52,6 +52,6 @@ const MobileMenu = ({ open, toggleMenu }: IProps): ReactElement => {
 
       <div className={clsx(open && "absolute top-0 z-5 w-full h-dscreen backdrop-blur-sm")} />
     </>
-  )};
+  );};
 
 export default MobileMenu;

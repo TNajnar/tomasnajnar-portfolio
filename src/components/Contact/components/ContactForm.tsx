@@ -1,8 +1,8 @@
 import { ChangeEvent, ReactElement } from "react";
 import { EFormStatus } from "@/utils/enums";
 import { TContactData } from "@/utils/types";
-import { Form } from "formik"
-import { email, emailPlaceHolder, emailTitle, name, namePlaceHolder, nameTitle, sendMessage, textArea } from "../ContactData"
+import { Form } from "formik";
+import { email, emailPlaceHolder, emailTitle, name, namePlaceHolder, nameTitle, sendMessage, textArea } from "../ContactData";
 import Loader from "@/components/ui/Loader";
 import { FaCheck } from "react-icons/fa";
 import clsx from "clsx";
@@ -85,6 +85,6 @@ const ContactForm = ({
       </button>
     )}
   </Form>
-)
+);
 
 export default ContactForm;

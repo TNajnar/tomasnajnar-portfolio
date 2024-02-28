@@ -1,4 +1,4 @@
-import { ReactElement } from "react"
+import { ReactElement } from "react";
 import { TECHNOLOGIES } from "@/utils/consts";
 import clsx from "clsx";
 
@@ -7,7 +7,7 @@ interface IProps {
 }
 
 const TechStack = ({ className }: IProps): ReactElement => (
-  <div className="flex gap-3 py-2">
+  <div className={clsx("flex gap-3 py-2", className)}>
     {TECHNOLOGIES.map((tech) => {
       const { color, id, icon: TechLogo } = tech;
 

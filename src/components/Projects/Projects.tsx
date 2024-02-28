@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { ReactElement, useRef } from "react";
 import Link from "next/link";
 import { Project } from "./components";
