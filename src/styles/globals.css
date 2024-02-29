@@ -85,7 +85,7 @@
   }
 
   .introBtn {
-    @apply desktop:relative py-2 w-full desktop:w-max desktop:px-12;
+    @apply relative py-2 w-full desktop:w-max desktop:px-12;
     @apply cursor-pointer;
     @apply border-3 dark:border-2 text-center rounded-lg md:text-xl;
     @apply text-black dark:text-yellow border-yellow-light-1 dark:border-white;
