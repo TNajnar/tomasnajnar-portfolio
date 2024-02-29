@@ -91,10 +91,6 @@
     @apply border-3 dark:border-2 text-center rounded-lg md:text-xl;
     @apply text-black dark:text-yellow border-yellow-light-1 dark:border-white;
   }
-  
-  .introBtnMobile:active {
-    top: 2px;
-  }
 
   .introBtn {
     @apply hidden md:block;
@@ -124,6 +120,7 @@
     @apply top-0 desktop:h-full;
   }
   
+  .introBtnMobile:active,
   .introBtn1:active {
     top: 2px;
   }
