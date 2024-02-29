@@ -36,6 +36,18 @@ const Introduction = (): ReactElement => (
       </p>
 
       <SocialIcons className="pb-9" classNameSize="w-6 h-6 md:w-8 md:h-8 desktop:w-10 desktop:h-10 hover:scale-110" />
+
+      <Link
+        className="introBtnMobile"
+        duration={SCROLL_DURATION}
+        offset={CONTACT_COORDINATES}
+        smooth
+        to={EScrollTo.CONTACT}
+        type="button"
+      >
+        {contact}
+      </Link>
+
       <Link
         className="introBtn introBtn1"
         duration={SCROLL_DURATION}
