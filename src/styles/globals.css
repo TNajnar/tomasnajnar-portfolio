@@ -20,7 +20,7 @@
     @apply self-start py-3 px-4 w-full text-black rounded-lg sm:w-contactButton;
     @apply text-white dark:text-black;
     @apply desktop:border-4 border-transparent hover:border-yellow dark:hover:border-white;
-    @apply hover:rounded-3xl;
+    @apply desktop:hover:rounded-3xl;
   }
 
   .greeting {
