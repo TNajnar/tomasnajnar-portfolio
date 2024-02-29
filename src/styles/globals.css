@@ -92,7 +92,7 @@
   }
   
   .introBtn1 {
-    @apply z-1 w-full;
+    @apply z-1 py-2 w-full desktop:w-max desktop:px-12;
     @apply border-3 border-yellow dark:border-white;
   }
   
