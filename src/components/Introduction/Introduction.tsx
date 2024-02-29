@@ -31,13 +31,13 @@ const Introduction = (): ReactElement => (
         />
       </h1>
 
-      <p className="pb-10 desktop:w-9/12 text-base sm:text-xl text-gray-light-modeText dark:text-gray">
+      <p className="pb-10 desktop:w-9/12 text-base sm:text-xl text-gray-light-modeText2 dark:text-gray">
         {description}
       </p>
 
       <SocialIcons className="pb-9" classNameSize="w-6 h-6 md:w-8 md:h-8 desktop:w-10 desktop:h-10 hover:scale-110" />
       <Link
-        className="buttonContact"
+        className="introBtn introBtn1"
         duration={SCROLL_DURATION}
         offset={CONTACT_COORDINATES}
         smooth

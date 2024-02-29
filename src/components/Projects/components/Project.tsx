@@ -17,7 +17,7 @@ const Project = ({
   style,
   url,
 }: TProject): ReactElement => url ? (
-  <Link className="projectsWrapper" href={url} target="_blank">
+  <Link className={clsx("default-transition", "projectsWrapper")} href={url} target="_blank">
     <div className="imgWrapper">
       <img alt={alt} className="rounded-lg" src={path} />
       {!!ViewIcon && <ViewIcon className="viewIcon" />}
@@ -25,7 +25,7 @@ const Project = ({
       <div className="mask" />
     </div>
 
-    <span className={styleAbout}>
+    <span className={clsx(styleAbout, "pt-1")}>
       {about}
     </span>
 
@@ -35,7 +35,7 @@ const Project = ({
     </div>
   </Link>
 ) : (
-  <div className="projectsWrapper">
+  <div className={clsx("default-transition", "projectsWrapper")}>
     <div className="imgWrapper">
       <img alt={alt} className={clsx(style, "rounded-lg")} src={path} />
       <span className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-full text-black text-xl text-center font-bold">
@@ -49,7 +49,7 @@ const Project = ({
       {about}
     </span>
 
-    <div>
+    <div className="mt-auto">
       <span className={styleUsed}>{used}</span>
       <TechStack className="flex gap-3 py-2" />
     </div>

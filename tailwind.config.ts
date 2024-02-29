@@ -1,4 +1,4 @@
-import type { Config } from 'tailwindcss'
+import type { Config } from 'tailwindcss';
 
 const config: Config = {
   content: [
@@ -19,7 +19,7 @@ const config: Config = {
         gray: {
           DEFAULT: '#F0F0F0',  // color for dark mode text
           'light-1': '#D9D9D9', // accessories, light mode
-          'light-modeText': '#000',  //334155, color for light mode text
+          'light-modeText': '#000',  // color for light mode text
           'light-modeText2': '#334155',  // color for light mode text
           'light-mode-2': '#8d8d8d',  // light mode gradient
           'dark-1': '#323232',  // accessories, dark mode
@@ -63,5 +63,6 @@ const config: Config = {
     },
   },
   plugins: [],
-}
-export default config
+};
+
+export default config;

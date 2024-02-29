@@ -50,13 +50,6 @@
   @apply text-custom-title sm:text-5xl desktop:text-8xl;
 }
 
-.buttonContact {
-  @apply block py-2 w-full desktop:w-max desktop:px-12;
-  @apply cursor-pointer;
-  @apply border-3 dark:border-2 text-center rounded-lg md:text-xl;
-  @apply text-black dark:text-yellow border-yellow-light-1 dark:border-white;
-}
-
 /* #endregion */
 
 /* #region Projects */
@@ -68,7 +61,7 @@
 }
 
 .imgWrapper {
-  @apply relative w-full h-full;
+  @apply relative w-full;
 }
 
 .viewIcon {
@@ -78,7 +71,7 @@
 }
 
 .projectsWrapper:where(:hover) > .imgWrapper .viewIcon {
-  @apply block cursor-pointer;
+  @apply desktop:block cursor-pointer;
 }
 
 .mask {
@@ -86,7 +79,7 @@
 }
 
 .projectsWrapper:where(:hover) > .imgWrapper .mask {
-  @apply bg-gray/40 blur-sm;
+  @apply desktop:bg-gray/40 blur-sm;
 }
 
 .description {
@@ -95,7 +88,7 @@
 }
 
 .projectsWrapper:where(:hover) > .imgWrapper .description {
-  @apply block;
+  @apply desktop:block;
 }
 
 /* #endregion */

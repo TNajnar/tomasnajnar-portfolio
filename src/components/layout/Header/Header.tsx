@@ -29,17 +29,16 @@ const Header = (): ReactElement => {
           <nav className="wrapper">
             {headerLinks.map(({coordinates, id, path, title}) => 
               <Link
-                className="headerItem"
+                className="headerItem default-transition"
                 duration={SCROLL_DURATION}
                 key={id}
                 offset={coordinates} 
                 smooth
                 spy={true} 
                 to={path}
+                type="button"
               >
-                <span className="w-full h-full p-2 bg-white dark:bg-black">
-                  {title}
-                </span>
+                {title}
               </Link>
             )}
 

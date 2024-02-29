@@ -6,7 +6,7 @@ export const projectTitle: string = 'Projects';
 
 export const myProjects: Array<TProject> = [
   {
-    about: "I have been working on project RegioJet Hotels. On my responsibility was",
+    about: "I worked on the RegiojetHotels project, where I was responsible for creating the website and now I'm doing the maintenance.",
     alt: "regiojethotels.cz",
     id: 44,
     icon: GrView,
@@ -14,7 +14,7 @@ export const myProjects: Array<TProject> = [
     url: ERoutes.REGIOJET_HOTELS
   },
   {
-    about: "I have been working on project RegioJet Hotels. On my responsibility was",
+    about: "I am working on the new-studentagency.cz project, which is not yet published.",
     alt: "new-studentagency.cz",
     description: "Comming soon...",
     id: 45,

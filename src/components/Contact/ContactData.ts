@@ -6,6 +6,9 @@ export const contactTitle: string = "Contact";
 
 export const sendMessage: string = "Send Message";
 
+export const sendCorrect: string = "Email was sent!";
+export const errorMessage: string = "Something went wrong. Email did not send!";
+
 export const emailTitle: string = "Email:*";
 export const email: string = 'email';
 export const emailPlaceHolder: string = "Enter your email";
@@ -19,4 +22,3 @@ export const textArea: TInputData = {
   name: "message",
   placeHolder: "Type your message"
 };
-

@@ -7,7 +7,7 @@ interface IProps {
 }
 
 const DarkThemeProvider = ({ children }: IProps): ReactElement => (
-  <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+  <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
     {children}
   </ThemeProvider>
 );

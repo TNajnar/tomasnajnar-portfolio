@@ -22,7 +22,7 @@ const SocialIcons = ({ className, classNameSize, defaultSize, withBorder = false
 
       return (
         <Link
-          className={clsx(withBorder && "socialWrapper")}
+          className={clsx(withBorder && "socialWrapper", "default-transition desktop:hover:scale-105")}
           href={url}
           key={id}
           target="_blank"

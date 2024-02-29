@@ -2,10 +2,11 @@ import { ChangeEvent, ReactElement } from "react";
 import { EFormStatus } from "@/utils/enums";
 import { TContactData } from "@/utils/types";
 import { Form } from "formik";
-import { email, emailPlaceHolder, emailTitle, name, namePlaceHolder, nameTitle, sendMessage, textArea } from "../ContactData";
+import { email, emailPlaceHolder, emailTitle, errorMessage, name, namePlaceHolder, nameTitle, sendCorrect, sendMessage, textArea } from "../ContactData";
 import Loader from "@/components/ui/Loader";
 import { FaCheck } from "react-icons/fa";
 import clsx from "clsx";
+import { IoMdClose } from "react-icons/io";
 
 interface IProps {
   formStatus: EFormStatus;
@@ -67,17 +68,20 @@ const ContactForm = ({
     </label>
 
     {formStatus === EFormStatus.ERROR && (
-      <div>Alert, error</div>     // TODO Alert component
+      <div className="flex items-center gap-3 text-xl text-red-700">
+        <span>{errorMessage}</span>
+        <IoMdClose className="text-red-700" />
+      </div>
     )}
 
     {formStatus === EFormStatus.SENT ? (
       <div className="flex items-center gap-3 text-xl text-green-700">
-        <span>Email was sent!</span>
+        <span>{sendCorrect}</span>
         <FaCheck className="text-green-700" />
       </div>
     ) : (
       <button
-        className={clsx("button", "bg-gray-dark-1 dark:bg-yellow")}
+        className={clsx("default-transition", "button", "bg-gray-dark-1 dark:bg-yellow")}
         disabled={isSubmitting}
         type="submit"
       >

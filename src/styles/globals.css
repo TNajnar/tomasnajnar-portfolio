@@ -19,6 +19,8 @@
     @apply flex items-center justify-center;
     @apply self-start py-3 px-4 w-full text-black rounded-lg sm:w-contactButton;
     @apply text-white dark:text-black;
+    @apply desktop:border-4 border-transparent hover:border-yellow dark:hover:border-white;
+    @apply hover:rounded-3xl;
   }
 
   .greeting {
@@ -39,7 +41,16 @@
   }
 
   .socialIcon {
-    @apply hover:fill-gray-light-modeText2 dark:hover:fill-white;
+    @apply hover:fill-black dark:hover:fill-white;
+  }
+
+  /* #endregion */
+
+}
+
+@layer utilities {
+  .default-transition {
+    @apply transform transition-all duration-300 ease-in-out;
   }
 
   .svg > circle {
@@ -73,12 +84,35 @@
     }
   }
 
-  /* #endregion */
-
-}
-
-@layer utilities {
-  .default-transition {
+  .introBtn {
+    @apply relative py-2 w-full desktop:w-max desktop:px-12;
+    @apply cursor-pointer;
+    @apply border-3 dark:border-2 text-center rounded-lg md:text-xl;
+    @apply text-black dark:text-yellow border-yellow-light-1 dark:border-white;
+  }
+  
+  .introBtn1 {
+    @apply z-1;
+    @apply border-3 border-yellow dark:border-white;
+  }
+  
+  .introBtn1:after {
+    @apply absolute bottom-0 left-0 -z-1;
+    @apply w-full h-0 content-[""] rounded-md;
+    @apply  bg-gray-light-1 dark:bg-gray-dark-1;
     @apply transform transition-all duration-300;
   }
+  
+  .introBtn1:hover {
+    @apply text-black dark:text-yellow;
+  }
+  
+  .introBtn1:hover:after {
+    @apply top-0 desktop:h-full;
+  }
+  
+  .introBtn1:active {
+    top: 2px;
+  }
+
 }
