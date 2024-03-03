@@ -4,9 +4,9 @@ import { TContactData } from "@/utils/types";
 import { Form } from "formik";
 import { email, emailPlaceHolder, emailTitle, errorMessage, name, namePlaceHolder, nameTitle, sendCorrect, sendMessage, textArea } from "../ContactData";
 import Loader from "@/components/ui/Loader";
+import { IoMdClose } from "react-icons/io";
 import { FaCheck } from "react-icons/fa";
 import clsx from "clsx";
-import { IoMdClose } from "react-icons/io";
 
 interface IProps {
   formStatus: EFormStatus;
