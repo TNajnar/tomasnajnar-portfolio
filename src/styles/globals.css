@@ -9,9 +9,7 @@
   padding-left: 16px;
   padding-right: 16px;
 
-  @screen desktop {
-    max-width: 1224px;
-  }
+  @apply desktop:max-w-[1224px]
 }
 
 @layer components {
