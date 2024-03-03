@@ -16,8 +16,10 @@ export const metadata: Metadata = {
     images: [{
       url: "tn-logo.svg",
     }],
+    locale:"en",
   },
   title: "Tomáš Najnar",
+  robots: "index, follow",
 };
 
 interface IProps {
