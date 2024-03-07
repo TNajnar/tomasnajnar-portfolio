@@ -1,9 +1,9 @@
 import { ReactElement, ReactNode } from "react";
 import { Metadata } from "next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import DarkThemeProvider from "./DarkThemeProvider";
 import { Footer, Header } from "@/components";
 import '@/styles/index.css';
-
 export const metadata: Metadata = {
   description: "Tomáš Najnar - frontend engineer specializing in the modern design and development of web and mobile applications.",
   icons: "/tn-logo.svg",
@@ -36,6 +36,7 @@ const RootLayout = ({ children }: IProps): ReactElement => (
         </main>
         <Footer />
       </DarkThemeProvider>
+      <SpeedInsights />
     </body>
   </html>
 );
