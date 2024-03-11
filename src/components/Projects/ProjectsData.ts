@@ -21,6 +21,14 @@ export const myProjects: Array<TProject> = [
     path: "/sa.png",
     style: "bg-gray-dark-1 blur-sm"
   },
+  {
+    about: "I am working on the terraza-vyhlidka.cz project, where I am responsible for design and creating the website.",
+    alt: "terraza-vyhlidka.cz",
+    description: "Comming soon...",
+    id: 45,
+    path: "/terraza-vyhlidka.png",
+    style: "bg-gray-dark-1 blur-sm"
+  },
 ];
 
 export const used: string = 'What I use';
