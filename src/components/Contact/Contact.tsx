@@ -19,10 +19,10 @@ const Contact = (): ReactElement => {
   const [formStatus , setFormStatus] = useState<EFormStatus>(EFormStatus.UNSENT);
 
   const handleSubmit = async (
-    contactData: TContactData, { resetForm }: FormikHelpers<TContactData>
+    contactData: TContactData, { resetForm }: FormikHelpers<TContactData>,
   ): Promise<void> => {
     const response = await sendEmail(contactData);
-    
+
     setFormStatus(response.ok ? EFormStatus.SENT : EFormStatus.ERROR);
     resetForm();
   };
