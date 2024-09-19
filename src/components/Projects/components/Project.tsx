@@ -5,6 +5,8 @@ import { used } from "../ProjectsData";
 import { TechStack } from "@/components/shared";
 import clsx from "clsx";
 import Image from "next/image";
+import { ERoutes } from "@/utils/enums";
+import OtherTechStack from "@/components/shared/OtherTechStack";
 
 const styleAbout = "text-gray-light-modeText2 dark:text-gray";
 const styleUsed = "font-semibold text-black dark:text-yellow";
@@ -30,9 +32,9 @@ const Project = ({
       {about}
     </span>
 
-    <div>
+    <div className="mt-auto">
       <span className={styleUsed}>{used}</span>
-      <TechStack className="flex gap-3 py-2" />
+      {url === ERoutes.ODBAVENI ? <OtherTechStack /> : <TechStack />}
     </div>
   </Link>
 ) : (
@@ -52,7 +54,7 @@ const Project = ({
 
     <div className="mt-auto">
       <span className={styleUsed}>{used}</span>
-      <TechStack className="flex gap-3 py-2" />
+      <TechStack />
     </div>
   </div>
 );
