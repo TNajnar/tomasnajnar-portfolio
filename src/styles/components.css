@@ -61,7 +61,7 @@
 }
 
 .imgWrapper {
-  @apply relative w-full;
+  @apply relative w-full h-[270px] desktop:h-[200px];
 }
 
 .viewIcon {

@@ -11,23 +11,32 @@ export const myProjects: Array<TProject> = [
     id: 44,
     icon: GrView,
     path: "/hotels.png",
-    url: ERoutes.REGIOJET_HOTELS
+    url: ERoutes.REGIOJET_HOTELS,
   },
   {
-    about: "I am working on the new-studentagency.cz project, where I am responsible for creating the website.",
+    about: "I was part of a team responsible for the development of the new-studentagency.cz website.",
     alt: "new-studentagency.cz",
-    description: "Comming soon...",
     id: 45,
-    path: "/sa.png",
-    style: "bg-gray-dark-1 blur-sm"
+    icon: GrView,
+    path: "/studentagency.png",
+    url: ERoutes.STUDENT_AGENCY,
+    // style: "bg-gray-dark-1 blur-sm"
   },
   {
-    about: "I am working on the terraza-vyhlidka.cz project, where I am responsible for design and creating the website.",
+    about: "I am working on the terraza-vyhlidka.cz project, where I am responsible for design and creating the website. The project is still in development and not yet live on the production domain.",
     alt: "terraza-vyhlidka.cz",
-    description: "Comming soon...",
     id: 45,
-    path: "/terraza-vyhlidka.png",
-    style: "bg-gray-dark-1 blur-sm"
+    icon: GrView,
+    path: "/terr.png",
+    url: ERoutes.TERRAZA_VYHLIDKA,
+  },
+  {
+    about: "I developed an internal application in React Native with Expo for check-in of RegioJet buses and trains. The app is multi-platform (iOS, Android) and simplifies the passenger check-in process.",
+    alt: "odbaveni.sa.cz",
+    id: 45,
+    icon: GrView,
+    path: "/odbaveni.png",
+    url: ERoutes.ODBAVENI,
   },
 ];
 

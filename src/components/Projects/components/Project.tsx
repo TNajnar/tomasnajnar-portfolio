@@ -4,6 +4,7 @@ import { TProject } from "@/utils/types";
 import { used } from "../ProjectsData";
 import { TechStack } from "@/components/shared";
 import clsx from "clsx";
+import Image from "next/image";
 
 const styleAbout = "text-gray-light-modeText2 dark:text-gray";
 const styleUsed = "font-semibold text-black dark:text-yellow";
@@ -19,7 +20,7 @@ const Project = ({
 }: TProject): ReactElement => url ? (
   <Link className={clsx("default-transition", "projectsWrapper")} href={url} target="_blank">
     <div className="imgWrapper">
-      <img alt={alt} className="rounded-lg" src={path} />
+      <Image alt={alt} className="object-cover w-full h-full rounded-lg" src={path} fill />
       {!!ViewIcon && <ViewIcon className="viewIcon" />}
       <span className="description">{alt}</span>
       <div className="mask" />
@@ -37,7 +38,7 @@ const Project = ({
 ) : (
   <div className={clsx("default-transition", "projectsWrapper")}>
     <div className="imgWrapper">
-      <img alt={alt} className={clsx(style, "rounded-lg")} src={path} />
+      <Image alt={alt} className={clsx(style, "object-cover w-full h-full rounded-lg")} src={path}fill  />
       <span className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-full text-black text-xl text-center font-bold">
         {description}
       </span>

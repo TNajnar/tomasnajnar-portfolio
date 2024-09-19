@@ -3,6 +3,9 @@ export enum ERoutes {
   INSTAGRAM = "https://www.instagram.com/tomas.najnar?igsh=MW5tMHM5czl0bXc1bw%3D%3D&utm_source=qr",
   LINKEDIN = "https://www.linkedin.com/in/tom%C3%A1%C5%A1-najnar-405a93233",
   REGIOJET_HOTELS = "https://regiojethotels.cz",
+  TERRAZA_VYHLIDKA = "https://terazza-vyhlidka.vercel.app/",
+  ODBAVENI = "https://odbaveni.sa.cz/",
+  STUDENT_AGENCY = "https://www.studentagency.cz/",
 }
 
 export enum EScrollTo {
