@@ -23,7 +23,7 @@ export const myProjects: Array<TProject> = [
     // style: "bg-gray-dark-1 blur-sm"
   },
   {
-    about: "I am working on the terraza-vyhlidka.cz project, where I am responsible for design and creating the website. The project is still in development and not yet live on the production domain.",
+    about: "I created the terrazavyhlidka.cz project, where I was responsible for creating the website.",
     alt: "terraza-vyhlidka.cz",
     id: 45,
     icon: GrView,
