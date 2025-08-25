@@ -19,6 +19,7 @@ const Project = ({
   path,
   style,
   url,
+  id,
 }: TProject): ReactElement => url ? (
   <Link className={clsx("default-transition", "projectsWrapper")} href={url} target="_blank">
     <div className="imgWrapper">
@@ -34,7 +35,7 @@ const Project = ({
 
     <div className="mt-auto">
       <span className={styleUsed}>{used}</span>
-      {url === ERoutes.ODBAVENI ? <OtherTechStack /> : <TechStack />}
+      {url === ERoutes.ODBAVENI ? <OtherTechStack /> : <TechStack isDifferentStack={id === 48} />}
     </div>
   </Link>
 ) : (

@@ -6,6 +6,7 @@ export enum ERoutes {
   TERRAZA_VYHLIDKA = "https://www.terrazavyhlidka.cz",
   ODBAVENI = "https://odbaveni.sa.cz/",
   STUDENT_AGENCY = "https://www.studentagency.cz/",
+  BPROTECTED = "https://bprotected.cz/",
 }
 
 export enum EScrollTo {

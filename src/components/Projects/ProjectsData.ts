@@ -25,7 +25,7 @@ export const myProjects: Array<TProject> = [
   {
     about: "I created the terrazavyhlidka.cz project, where I was responsible for creating the website.",
     alt: "terraza-vyhlidka.cz",
-    id: 45,
+    id: 46,
     icon: GrView,
     path: "/terr.png",
     url: ERoutes.TERRAZA_VYHLIDKA,
@@ -33,10 +33,18 @@ export const myProjects: Array<TProject> = [
   {
     about: "I developed an internal application in React Native with Expo for check-in of RegioJet buses and trains. The app is multi-platform (iOS, Android) and simplifies the passenger check-in process.",
     alt: "odbaveni.sa.cz",
-    id: 45,
+    id: 47,
     icon: GrView,
     path: "/odbaveni.png",
     url: ERoutes.ODBAVENI,
+  },
+  {
+    about: "I created the bprotected.cz project, where I was responsible for create design and implementation of the website.",
+    alt: "bprotected.cz",
+    id: 48,
+    icon: GrView,
+    path: "/bprotected.png",
+    url: ERoutes.BPROTECTED,
   },
 ];
 

@@ -1,4 +1,4 @@
-import { FaGithub, FaInstagram, FaLinkedinIn, FaReact } from "react-icons/fa";
+import { FaAngular, FaGithub, FaInstagram, FaLinkedinIn, FaReact } from "react-icons/fa";
 import { TScrollOpt, TSocialIcon, TTechStack } from "./types";
 import { ERoutes } from "./enums";
 import { IoLogoJavascript } from "react-icons/io";
@@ -28,3 +28,8 @@ export const TECHNOLOGIES: Array<TTechStack> = [
   { color: 'text-ts', id: 81, icon: SiTypescript },
 ];
 
+export const ANGULAR_TECH = [
+  { color: 'text-red-600', id: 82, icon: FaAngular },
+  { color: 'text-css', id: 80, icon: SiTailwindcss },
+  { color: 'text-ts', id: 81, icon: SiTypescript },
+];
